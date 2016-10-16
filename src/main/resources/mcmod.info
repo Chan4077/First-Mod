@@ -1,0 +1,15 @@
+[
+{
+  "modid": "first",
+  "name": "Edric's First Mod",
+  "description": "My First Mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Edric Chan"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

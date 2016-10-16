@@ -1,0 +1,20 @@
+item.cheese.name=Cheese
+item.ruby.name=Ruby
+item.cheese_and_cookie.name=Cheese Cookie
+item.cracker.name=Cracker
+
+tile.chair.name=Chair
+tile.cheese_block.name=Cheese Block
+tile.ruby_block.name=Ruby Block
+tile.letter_a.name=Letter A
+tile.letter_b.name=Letter B
+tile.letter_c.name=Letter C
+tile.letter_d.name=Letter D
+tile.letter_e.name=Letter E
+tile.letter_f.name=Letter F
+tile.letter_g.name=Letter G
+tile.letter_t.name=Letter T
+
+itemGroup.tabFirst=First Mod
+itemGroup.letterTab=First Mod - Letters
+itemGroup.foodTab=First Mod - Foods
