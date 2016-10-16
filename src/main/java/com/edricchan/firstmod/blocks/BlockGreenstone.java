@@ -1,3 +1,4 @@
+/*
 package com.edricchan.firstmod.blocks;
 
 import com.edricchan.firstmod.FirstMod;
@@ -21,7 +22,6 @@ public class BlockGreenstone extends Block {
 		setUnlocalizedName(Reference.FirstBlocks.GREENSTONE_BLOCK.getUnlocalizedName());
 		setRegistryName(Reference.FirstBlocks.GREENSTONE_BLOCK.getRegistryName());
 		setHardness(1.0F);
-		// Found in Redstone tab of Minecraft's default tabs
 		setCreativeTab(CreativeTabs.REDSTONE);
 		setHarvestLevel("pickaxe", 2);
 	}
@@ -37,3 +37,4 @@ public class BlockGreenstone extends Block {
 		return true;
 	}
 }
+*/

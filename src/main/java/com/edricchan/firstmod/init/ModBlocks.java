@@ -2,7 +2,7 @@ package com.edricchan.firstmod.init;
 
 import com.edricchan.firstmod.blocks.BlockChair;
 import com.edricchan.firstmod.blocks.BlockCheese;
-import com.edricchan.firstmod.blocks.BlockGreenstone;
+// import com.edricchan.firstmod.blocks.BlockGreenstone;
 import com.edricchan.firstmod.blocks.BlockRuby;
 
 import net.minecraft.block.Block;
