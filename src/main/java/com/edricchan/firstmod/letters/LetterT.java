@@ -3,18 +3,14 @@ package com.edricchan.firstmod.letters;
 import com.edricchan.firstmod.FirstMod;
 import com.edricchan.firstmod.Reference;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 
-public class LetterT extends Block {
+public class LetterT extends Item {
 
 	public LetterT() {
-		super(Material.WOOD);
 		setUnlocalizedName(Reference.FirstLetters.LETTER_T.getUnlocalizedName());
 		setRegistryName(Reference.FirstLetters.LETTER_T.getRegistryName());
-		setHardness(1.0F);
-		setCreativeTab(FirstMod.LETTER_TAB);
-		setHarvestLevel("pickaxe", 2);
-	}
+		setCreativeTab(FirstMod.LETTERS_TAB);
 
+	}
 }

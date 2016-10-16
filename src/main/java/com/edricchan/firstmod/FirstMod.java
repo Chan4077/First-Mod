@@ -5,7 +5,8 @@ import com.edricchan.firstmod.init.ModBlocks;
 import com.edricchan.firstmod.init.ModCrafting;
 import com.edricchan.firstmod.init.ModFoods;
 import com.edricchan.firstmod.init.ModItems;
-import com.edricchan.firstmod.init.ModLetters;
+import com.edricchan.firstmod.init.ModLetterColourBlocks;
+import com.edricchan.firstmod.init.ModLetterBlocks;
 import com.edricchan.firstmod.proxy.CommonProxy;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,8 +29,10 @@ public class FirstMod {
 	
 	// Creative Mode Tab
 	public static final CreativeTabs MAIN_TAB = new FirstModTab();
-	public static final CreativeTabs LETTER_TAB = new LetterTab();
 	public static final CreativeTabs FOOD_TAB = new FoodTab();
+	public static final CreativeTabs LETTER_BLOCKS_TAB = new LetterBlocksTab();
+	public static final CreativeTabs LETTERS_TAB = new LettersTab();
+	public static final CreativeTabs LETTER_COLOUR_BLOCK_TAB = new LetterColourBlocksTab();
 	// Initialize
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -42,11 +45,14 @@ public class FirstMod {
 		ModBlocks.init();
 		ModBlocks.register();
 		
-		ModLetters.init();
-		ModLetters.register();
+		ModLetterBlocks.init();
+		ModLetterBlocks.register();
 		
 		ModFoods.init();
 		ModFoods.register();
+		
+		ModLetterColourBlocks.init();
+		ModLetterColourBlocks.register();
 	}
 	
 	@EventHandler

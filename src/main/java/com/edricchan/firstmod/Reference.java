@@ -66,12 +66,78 @@ public class Reference {
 		LETTER_E("letter_e", "LetterE"),
 		LETTER_F("letter_f", "LetterF"),
 		LETTER_G("letter_g", "LetterG"),
-		LETTER_T("letter_t", "LetterT");
+		LETTER_H("letter_h", "LetterH"),
+		LETTER_I("letter_i", "LetterI"),
+		LETTER_J("letter_j", "LetterJ"),
+		LETTER_K("letter_h", "LetterH"),
+		LETTER_L("letter_l", "LetterL"),
+		LETTER_M("letter_m", "LetterM"),
+		LETTER_N("letter_n", "LetterN"),
+		LETTER_O("letter_o", "LetterO"),
+		LETTER_P("letter_p", "LetterP"),
+		LETTER_Q("letter_q", "LetterQ"),
+		LETTER_R("letter_r", "LetterR"),
+		LETTER_S("letter_s", "LetterS"),
+		LETTER_T("letter_t", "LetterT"),
+		LETTER_U("letter_u", "LetterU"),
+		LETTER_V("letter_v", "LetterV"),
+		LETTER_W("letter_w", "LetterW"),
+		LETTER_X("letter_x", "LetterX"),
+		LETTER_Y("letter_y", "LetterY"),
+		LETTER_Z("letter_z", "LetterZ");
 		
 		private String unlocalizedName;
 		private String registryName;
 		
 		FirstLetters(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
+	public static enum FirstLetterBlocks {
+		// Letters
+		LETTER_A_ORANGE("letter_a_orange", "LetterAOrange"),
+		LETTER_B_ORANGE("letter_b_orange", "LetterBOrange"),
+		LETTER_C_ORANGE("letter_c_orange", "LetterCOrange"),
+		LETTER_D_ORANGE("letter_d_orange", "LetterDOrange"),
+		LETTER_E_ORANGE("letter_e_orange", "LetterEOrange"),
+		LETTER_F_ORANGE("letter_f_orange", "LetterFOrange"),
+		LETTER_G_ORANGE("letter_g_orange", "LetterGOrange"),
+		LETTER_H_ORANGE("letter_h_orange", "LetterHOrange"),
+		LETTER_I_ORANGE("letter_i_orange", "LetterIOrange"),
+		LETTER_J_ORANGE("letter_j_orange", "LetterJOrange"),
+		LETTER_K_ORANGE("letter_k_orange", "LetterKOrange"),
+		LETTER_L_ORANGE("letter_l_orange", "LetterLOrange"),
+		LETTER_M_ORANGE("letter_m_orange", "LetterMOrange"),
+		LETTER_N_ORANGE("letter_n_orange", "LetterNOrange"),
+		LETTER_O_ORANGE("letter_o_orange", "LetterOOrange"),
+		LETTER_P_ORANGE("letter_p_orange", "LetterPOrange"),
+		LETTER_Q_ORANGE("letter_q_orange", "LetterQOrange"),
+		LETTER_R_ORANGE("letter_r_orange", "LetterROrange"),
+		LETTER_S_ORANGE("letter_s_orange", "LetterSOrange"),
+		LETTER_T_ORANGE("letter_t_orange", "LetterTOrange"),
+		LETTER_U_ORANGE("letter_u_orange", "LetterUOrange"),
+		LETTER_V_ORANGE("letter_v_orange", "LetterVOrange"),
+		LETTER_W_ORANGE("letter_w_orange", "LetterWOrange"),
+		LETTER_X_ORANGE("letter_x_orange", "LetterXOrange"),
+		LETTER_Y_ORANGE("letter_y_orange", "LetterYOrange"),
+		LETTER_Z_ORANGE("letter_z_orange", "LetterZOrange"),
+		
+		// Default
+		LETTER_ORANGE("letter_orange", "LetterOrange");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		FirstLetterBlocks(String unlocalizedName, String registryName) {
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
 		}
