@@ -18,20 +18,20 @@ public class ModBlocks {
 	public static Block cheese_block;
 	public static Block ruby_block;
 	public static Block chair;
-	public static Block greenstone_block;
+	// public static Block greenstone_block;
 	
 	public static void init() {
 		cheese_block = new BlockCheese();
 		ruby_block = new BlockRuby();
 		chair = new BlockChair();
-		greenstone_block = new BlockGreenstone();
+		// greenstone_block = new BlockGreenstone();
 	}
 	
 	public static void register() {
 		registerBlock(cheese_block);
 		registerBlock(ruby_block);
 		registerBlock(chair);
-		registerBlock(greenstone_block);
+		// registerBlock(greenstone_block);
 	}
 	
 	private static void registerBlock(Block block) {
@@ -45,7 +45,7 @@ public class ModBlocks {
 		registerRender(cheese_block);
 		registerRender(ruby_block);
 		registerRender(chair);
-		registerRender(greenstone_block);
+		// registerRender(greenstone_block);
 	}
 	
 	private static void registerRender(Block block) {

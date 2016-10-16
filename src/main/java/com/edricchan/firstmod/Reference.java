@@ -37,8 +37,8 @@ public class Reference {
 	public static enum FirstBlocks {
 		CHEESE_BLOCK("cheese_block", "BlockCheese"),
 		RUBY_BLOCK("ruby_block", "BlockRuby"),
-		CHAIR("chair", "BlockChair"),
-		GREENSTONE_BLOCK("greenstone_block", "BlockGreenstone");
+		CHAIR("chair", "BlockChair");
+		// GREENSTONE_BLOCK("greenstone_block", "BlockGreenstone");
 		// STORAGE_BLOCK("storage_block", "BlockStorageChest");
 		
 		private String unlocalizedName;
