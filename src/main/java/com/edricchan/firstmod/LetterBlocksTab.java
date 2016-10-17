@@ -13,7 +13,7 @@ public class LetterBlocksTab extends CreativeTabs {
 	
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(ModLetterBlocks.letter_a_orange);
+		return Item.getItemFromBlock(ModLetterBlocks.LETTER_A_ORANGE);
 	}
 	
 }

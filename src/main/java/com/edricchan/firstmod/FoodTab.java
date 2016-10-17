@@ -13,7 +13,7 @@ public class FoodTab extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return ModFoods.cheese_and_cookie;
+		return ModFoods.CHEESE_AND_COOKIE;
 	}
 	
 }

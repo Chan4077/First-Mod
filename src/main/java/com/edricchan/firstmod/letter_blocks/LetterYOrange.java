@@ -10,8 +10,8 @@ public class LetterYOrange extends Block {
 
 	public LetterYOrange() {
 		super(Material.WOOD);
-		setUnlocalizedName(Reference.FirstLetterBlocks.LETTER_H_ORANGE.getUnlocalizedName());
-		setRegistryName(Reference.FirstLetterBlocks.LETTER_H_ORANGE.getRegistryName());
+		setUnlocalizedName(Reference.FirstLetterBlocks.LETTER_Y_ORANGE.getUnlocalizedName());
+		setRegistryName(Reference.FirstLetterBlocks.LETTER_Y_ORANGE.getRegistryName());
 		setHardness(1.0F);
 		setCreativeTab(FirstMod.LETTER_BLOCKS_TAB);
 		setHarvestLevel("pickaxe", 2);

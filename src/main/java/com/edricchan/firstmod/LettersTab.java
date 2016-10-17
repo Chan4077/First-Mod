@@ -13,7 +13,7 @@ public class LettersTab extends CreativeTabs {
 	
 	@Override
 	public Item getTabIconItem() {
-		return ModLetters.letter_a;
+		return ModLetters.ITEM_LETTER_A;
 	}
 	
 }

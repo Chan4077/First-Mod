@@ -6,6 +6,7 @@ import com.edricchan.firstmod.init.ModCrafting;
 import com.edricchan.firstmod.init.ModFoods;
 import com.edricchan.firstmod.init.ModItems;
 import com.edricchan.firstmod.init.ModLetterColourBlocks;
+import com.edricchan.firstmod.init.ModLetters;
 import com.edricchan.firstmod.init.ModLetterBlocks;
 import com.edricchan.firstmod.proxy.CommonProxy;
 
@@ -32,7 +33,7 @@ public class FirstMod {
 	public static final CreativeTabs FOOD_TAB = new FoodTab();
 	public static final CreativeTabs LETTER_BLOCKS_TAB = new LetterBlocksTab();
 	public static final CreativeTabs LETTERS_TAB = new LettersTab();
-	public static final CreativeTabs LETTER_COLOUR_BLOCK_TAB = new LetterColourBlocksTab();
+	public static final CreativeTabs LETTER_COLOUR_BLOCKS_TAB = new LetterColourBlocksTab();
 	// Initialize
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -50,6 +51,9 @@ public class FirstMod {
 		
 		ModFoods.init();
 		ModFoods.register();
+		
+		ModLetters.init();
+		ModLetters.register();
 		
 		ModLetterColourBlocks.init();
 		ModLetterColourBlocks.register();

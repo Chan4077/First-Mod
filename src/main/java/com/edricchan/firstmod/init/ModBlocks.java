@@ -15,23 +15,23 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 
 	// Blocks
-	public static Block cheese_block;
-	public static Block ruby_block;
-	public static Block chair;
-	// public static Block greenstone_block;
+	public static Block CHEESE_BLOCK;
+	public static Block RUBY_BLOCK;
+	public static Block CHAIR;
+	// public static Block GREENSTONE_BLOCK;
 	
 	public static void init() {
-		cheese_block = new BlockCheese();
-		ruby_block = new BlockRuby();
-		chair = new BlockChair();
-		// greenstone_block = new BlockGreenstone();
+		CHEESE_BLOCK = new BlockCheese();
+		RUBY_BLOCK = new BlockRuby();
+		CHAIR = new BlockChair();
+		// GREENSTONE_BLOCK = new BlockGreenstone();
 	}
 	
 	public static void register() {
-		registerBlock(cheese_block);
-		registerBlock(ruby_block);
-		registerBlock(chair);
-		// registerBlock(greenstone_block);
+		registerBlock(CHEESE_BLOCK);
+		registerBlock(RUBY_BLOCK);
+		registerBlock(CHAIR);
+		// registerBlock(GREENSTONE_BLOCK);
 	}
 	
 	private static void registerBlock(Block block) {
@@ -42,10 +42,10 @@ public class ModBlocks {
 	}
 	
 	public static void registerRenders() {
-		registerRender(cheese_block);
-		registerRender(ruby_block);
-		registerRender(chair);
-		// registerRender(greenstone_block);
+		registerRender(CHEESE_BLOCK);
+		registerRender(RUBY_BLOCK);
+		registerRender(CHAIR);
+		// registerRender(GREENSTONE_BLOCK);
 	}
 	
 	private static void registerRender(Block block) {

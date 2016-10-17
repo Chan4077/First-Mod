@@ -12,26 +12,26 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModFoods {
 
 	// Items
-	public static Item cheese_and_cookie;
-	public static Item cheese;
-	public static Item cracker;
+	public static Item CHEESE_AND_COOKIE;
+	public static Item CHEESE;
+	public static Item CRACKER;
 	
 	public static void init() {
-		cheese_and_cookie = new FoodCheeseCookie();
-		cheese = new FoodCheese();
-		cracker = new FoodCracker();
+		CHEESE_AND_COOKIE = new FoodCheeseCookie();
+		CHEESE = new FoodCheese();
+		CRACKER = new FoodCracker();
 	}
 	
 	public static void register() {
-		GameRegistry.register(cheese_and_cookie);
-		GameRegistry.register(cheese);
-		GameRegistry.register(cracker);
+		GameRegistry.register(CHEESE_AND_COOKIE);
+		GameRegistry.register(CHEESE);
+		GameRegistry.register(CRACKER);
 	}
 	
 	public static void registerRenders() {
-		registerRender(cheese_and_cookie);
-		registerRender(cheese);
-		registerRender(cracker);
+		registerRender(CHEESE_AND_COOKIE);
+		registerRender(CHEESE);
+		registerRender(CRACKER);
 	}
 	
 	private static void registerRender(Item item) {

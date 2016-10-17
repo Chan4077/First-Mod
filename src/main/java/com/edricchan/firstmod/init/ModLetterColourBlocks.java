@@ -1,15 +1,6 @@
 package com.edricchan.firstmod.init;
 
-import com.edricchan.firstmod.letter_blocks.LetterAOrange;
-import com.edricchan.firstmod.letter_blocks.LetterBOrange;
-import com.edricchan.firstmod.letter_blocks.LetterCOrange;
-import com.edricchan.firstmod.letter_blocks.LetterDOrange;
-import com.edricchan.firstmod.letter_blocks.LetterEOrange;
-import com.edricchan.firstmod.letter_blocks.LetterFOrange;
-import com.edricchan.firstmod.letter_blocks.LetterGOrange;
-import com.edricchan.firstmod.letter_blocks.LetterHOrange;
-import com.edricchan.firstmod.letter_blocks.LetterOrange;
-import com.edricchan.firstmod.letter_blocks.LetterTOrange;
+ import com.edricchan.firstmod.letter_blocks.BlockLetterOrange;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -20,16 +11,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModLetterColourBlocks {
 	// Letter colours
-	public static Block letter_orange;
+	 public static Block BLOCK_LETTER_ORANGE;
 	
 	public static void init() {
 		// Default colours
-		letter_orange = new LetterOrange();
+		BLOCK_LETTER_ORANGE = new BlockLetterOrange();
 	}
 	
 	public static void register() {
 		// Default colours
-		registerBlock(letter_orange);
+		registerBlock(BLOCK_LETTER_ORANGE);
 	}
 	
 	private static void registerBlock(Block block) {
@@ -41,7 +32,7 @@ public class ModLetterColourBlocks {
 	
 	public static void registerRenders() {
 		// Default colours
-		registerBlock(letter_orange);
+	 	registerRender(BLOCK_LETTER_ORANGE);
 	}
 	
 	private static void registerRender(Block block) {

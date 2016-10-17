@@ -5,9 +5,9 @@ import com.edricchan.firstmod.Reference;
 
 import net.minecraft.item.Item;
 
-public class LetterC extends Item {
+public class ItemLetterC extends Item {
 
-	public LetterC() {
+	public ItemLetterC() {
 		setUnlocalizedName(Reference.FirstLetters.LETTER_C.getUnlocalizedName());
 		setRegistryName(Reference.FirstLetters.LETTER_C.getRegistryName());
 		setCreativeTab(FirstMod.LETTERS_TAB);

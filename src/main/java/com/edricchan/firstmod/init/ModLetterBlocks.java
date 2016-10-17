@@ -36,93 +36,90 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModLetterBlocks {
 	// Letters
-	public static Block letter_a_orange;
-	public static Block letter_b_orange;
-	public static Block letter_c_orange;
-	public static Block letter_d_orange;
-	public static Block letter_e_orange;
-	public static Block letter_f_orange;
-	public static Block letter_g_orange;
-	public static Block letter_h_orange;
-	public static Block letter_i_orange;
-	public static Block letter_j_orange;
-	public static Block letter_k_orange;
-	public static Block letter_l_orange;
-	public static Block letter_m_orange;
-	public static Block letter_n_orange;
-	public static Block letter_o_orange;
-	public static Block letter_p_orange;
-	public static Block letter_q_orange;
-	public static Block letter_r_orange;
-	public static Block letter_s_orange;
-	public static Block letter_t_orange;
-	public static Block letter_u_orange;
-	public static Block letter_v_orange;
-	public static Block letter_w_orange;
-	public static Block letter_x_orange;
-	public static Block letter_y_orange;
-	public static Block letter_z_orange;
-	
-	// Default colours
-	public static Block letter_orange;
+	public static Block LETTER_A_ORANGE;
+	public static Block LETTER_B_ORANGE;
+	public static Block LETTER_C_ORANGE;
+	public static Block LETTER_D_ORANGE;
+	public static Block LETTER_E_ORANGE;
+	public static Block LETTER_F_ORANGE;
+	public static Block LETTER_G_ORANGE;
+	public static Block LETTER_H_ORANGE;
+	public static Block LETTER_I_ORANGE;
+	public static Block LETTER_J_ORANGE;
+	public static Block LETTER_K_ORANGE;
+	public static Block LETTER_L_ORANGE;
+	public static Block LETTER_M_ORANGE;
+	public static Block LETTER_N_ORANGE;
+	public static Block LETTER_O_ORANGE;
+	public static Block LETTER_P_ORANGE;
+	public static Block LETTER_Q_ORANGE;
+	public static Block LETTER_R_ORANGE;
+	public static Block LETTER_S_ORANGE;
+	public static Block LETTER_T_ORANGE;
+	public static Block LETTER_U_ORANGE;
+	public static Block LETTER_V_ORANGE;
+	public static Block LETTER_W_ORANGE;
+	public static Block LETTER_X_ORANGE;
+	public static Block LETTER_Y_ORANGE;
+	public static Block LETTER_Z_ORANGE;
 	
 	public static void init() {
 		// Letters
-		letter_a_orange = new LetterAOrange();
-		letter_b_orange = new LetterBOrange();
-		letter_c_orange = new LetterCOrange();
-		letter_d_orange = new LetterDOrange();
-		letter_e_orange = new LetterEOrange();
-		letter_f_orange = new LetterFOrange();
-		letter_g_orange = new LetterGOrange();
-		letter_h_orange = new LetterHOrange();
-		letter_i_orange = new LetterIOrange();
-		letter_j_orange = new LetterJOrange();
-		letter_k_orange = new LetterKOrange();
-		letter_l_orange = new LetterLOrange();
-		letter_m_orange = new LetterMOrange();
-		letter_n_orange = new LetterNOrange();
-		letter_o_orange = new LetterOOrange();
-		letter_p_orange = new LetterPOrange();
-		letter_q_orange = new LetterQOrange();
-		letter_r_orange = new LetterROrange();
-		letter_s_orange = new LetterSOrange();
-		letter_t_orange = new LetterTOrange();
-		letter_u_orange = new LetterUOrange();
-		letter_v_orange = new LetterVOrange();
-		letter_w_orange = new LetterWOrange();
-		letter_x_orange = new LetterXOrange();
-		letter_y_orange = new LetterYOrange();
-		letter_z_orange = new LetterZOrange();
+		LETTER_A_ORANGE = new LetterAOrange();
+		LETTER_B_ORANGE = new LetterBOrange();
+		LETTER_C_ORANGE = new LetterCOrange();
+		LETTER_D_ORANGE = new LetterDOrange();
+		LETTER_E_ORANGE = new LetterEOrange();
+		LETTER_F_ORANGE = new LetterFOrange();
+		LETTER_G_ORANGE = new LetterGOrange();
+		LETTER_H_ORANGE = new LetterHOrange();
+		LETTER_I_ORANGE = new LetterIOrange();
+		LETTER_J_ORANGE = new LetterJOrange();
+		LETTER_K_ORANGE = new LetterKOrange();
+		LETTER_L_ORANGE = new LetterLOrange();
+		LETTER_M_ORANGE = new LetterMOrange();
+		LETTER_N_ORANGE = new LetterNOrange();
+		LETTER_O_ORANGE = new LetterOOrange();
+		LETTER_P_ORANGE = new LetterPOrange();
+		LETTER_Q_ORANGE = new LetterQOrange();
+		LETTER_R_ORANGE = new LetterROrange();
+		LETTER_S_ORANGE = new LetterSOrange();
+		LETTER_T_ORANGE = new LetterTOrange();
+		LETTER_U_ORANGE = new LetterUOrange();
+		LETTER_V_ORANGE = new LetterVOrange();
+		LETTER_W_ORANGE = new LetterWOrange();
+		LETTER_X_ORANGE = new LetterXOrange();
+		LETTER_Y_ORANGE = new LetterYOrange();
+		LETTER_Z_ORANGE = new LetterZOrange();
 	}
 	
 	public static void register() {
-		registerBlock(letter_a_orange);
-		registerBlock(letter_b_orange);
-		registerBlock(letter_c_orange);
-		registerBlock(letter_d_orange);
-		registerBlock(letter_e_orange);
-		registerBlock(letter_f_orange);
-		registerBlock(letter_g_orange);
-		registerBlock(letter_h_orange);
-		registerBlock(letter_i_orange);
-		registerBlock(letter_j_orange);
-		registerBlock(letter_k_orange);
-		registerBlock(letter_l_orange);
-		registerBlock(letter_m_orange);
-		registerBlock(letter_n_orange);
-		registerBlock(letter_o_orange);
-		registerBlock(letter_p_orange);
-		registerBlock(letter_q_orange);
-		registerBlock(letter_r_orange);
-		registerBlock(letter_s_orange);
-		registerBlock(letter_t_orange);
-		registerBlock(letter_u_orange);
-		registerBlock(letter_v_orange);
-		registerBlock(letter_w_orange);
-		registerBlock(letter_x_orange);
-		registerBlock(letter_y_orange);
-		registerBlock(letter_z_orange);
+		registerBlock(LETTER_A_ORANGE);
+		registerBlock(LETTER_B_ORANGE);
+		registerBlock(LETTER_C_ORANGE);
+		registerBlock(LETTER_D_ORANGE);
+		registerBlock(LETTER_E_ORANGE);
+		registerBlock(LETTER_F_ORANGE);
+		registerBlock(LETTER_G_ORANGE);
+		registerBlock(LETTER_H_ORANGE);
+		registerBlock(LETTER_I_ORANGE);
+		registerBlock(LETTER_J_ORANGE);
+		registerBlock(LETTER_K_ORANGE);
+		registerBlock(LETTER_L_ORANGE);
+		registerBlock(LETTER_M_ORANGE);
+		registerBlock(LETTER_N_ORANGE);
+		registerBlock(LETTER_O_ORANGE);
+		registerBlock(LETTER_P_ORANGE);
+		registerBlock(LETTER_Q_ORANGE);
+		registerBlock(LETTER_R_ORANGE);
+		registerBlock(LETTER_S_ORANGE);
+		registerBlock(LETTER_T_ORANGE);
+		registerBlock(LETTER_U_ORANGE);
+		registerBlock(LETTER_V_ORANGE);
+		registerBlock(LETTER_W_ORANGE);
+		registerBlock(LETTER_X_ORANGE);
+		registerBlock(LETTER_Y_ORANGE);
+		registerBlock(LETTER_Z_ORANGE);
 	}
 	
 	private static void registerBlock(Block block) {
@@ -133,35 +130,32 @@ public class ModLetterBlocks {
 	}
 	
 	public static void registerRenders() {
-		registerRender(letter_a_orange);
-		registerRender(letter_b_orange);
-		registerRender(letter_c_orange);
-		registerRender(letter_d_orange);
-		registerRender(letter_e_orange);
-		registerRender(letter_f_orange);
-		registerRender(letter_g_orange);
-		registerRender(letter_h_orange);
-		registerRender(letter_i_orange);
-		registerRender(letter_j_orange);
-		registerRender(letter_k_orange);
-		registerRender(letter_l_orange);
-		registerRender(letter_m_orange);
-		registerRender(letter_n_orange);
-		registerRender(letter_o_orange);
-		registerRender(letter_p_orange);
-		registerRender(letter_q_orange);
-		registerRender(letter_r_orange);
-		registerRender(letter_s_orange);
-		registerRender(letter_t_orange);
-		registerRender(letter_u_orange);
-		registerRender(letter_v_orange);
-		registerRender(letter_w_orange);
-		registerRender(letter_x_orange);
-		registerRender(letter_y_orange);
-		registerRender(letter_z_orange);
-		
-		// Default colours
-		registerBlock(letter_orange);
+		registerRender(LETTER_A_ORANGE);
+		registerRender(LETTER_B_ORANGE);
+		registerRender(LETTER_C_ORANGE);
+		registerRender(LETTER_D_ORANGE);
+		registerRender(LETTER_E_ORANGE);
+		registerRender(LETTER_F_ORANGE);
+		registerRender(LETTER_G_ORANGE);
+		registerRender(LETTER_H_ORANGE);
+		registerRender(LETTER_I_ORANGE);
+		registerRender(LETTER_J_ORANGE);
+		registerRender(LETTER_K_ORANGE);
+		registerRender(LETTER_L_ORANGE);
+		registerRender(LETTER_M_ORANGE);
+		registerRender(LETTER_N_ORANGE);
+		registerRender(LETTER_O_ORANGE);
+		registerRender(LETTER_P_ORANGE);
+		registerRender(LETTER_Q_ORANGE);
+		registerRender(LETTER_R_ORANGE);
+		registerRender(LETTER_S_ORANGE);
+		registerRender(LETTER_T_ORANGE);
+		registerRender(LETTER_U_ORANGE);
+		registerRender(LETTER_V_ORANGE);
+		registerRender(LETTER_W_ORANGE);
+		registerRender(LETTER_X_ORANGE);
+		registerRender(LETTER_Y_ORANGE);
+		registerRender(LETTER_Z_ORANGE);
 	}
 	
 	private static void registerRender(Block block) {

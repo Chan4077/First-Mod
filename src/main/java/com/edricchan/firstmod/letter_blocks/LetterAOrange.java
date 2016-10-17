@@ -15,6 +15,7 @@ public class LetterAOrange extends Block {
 		setHardness(1.0F);
 		setCreativeTab(FirstMod.LETTER_BLOCKS_TAB);
 		setHarvestLevel("pickaxe", 2);
+		
 	}
 
 }

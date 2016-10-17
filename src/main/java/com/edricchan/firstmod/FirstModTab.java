@@ -14,7 +14,7 @@ public class FirstModTab extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(ModBlocks.cheese_block);
+		return Item.getItemFromBlock(ModBlocks.CHEESE_BLOCK);
 	}
 	
 }

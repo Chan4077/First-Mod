@@ -59,32 +59,32 @@ public class Reference {
 	}
 	public static enum FirstLetters {
 		// Letters
-		LETTER_A("letter_a", "LetterA"),
-		LETTER_B("letter_b", "LetterB"),
-		LETTER_C("letter_c", "LetterC"),
-		LETTER_D("letter_d", "LetterD"),
-		LETTER_E("letter_e", "LetterE"),
-		LETTER_F("letter_f", "LetterF"),
-		LETTER_G("letter_g", "LetterG"),
-		LETTER_H("letter_h", "LetterH"),
-		LETTER_I("letter_i", "LetterI"),
-		LETTER_J("letter_j", "LetterJ"),
-		LETTER_K("letter_h", "LetterH"),
-		LETTER_L("letter_l", "LetterL"),
-		LETTER_M("letter_m", "LetterM"),
-		LETTER_N("letter_n", "LetterN"),
-		LETTER_O("letter_o", "LetterO"),
-		LETTER_P("letter_p", "LetterP"),
-		LETTER_Q("letter_q", "LetterQ"),
-		LETTER_R("letter_r", "LetterR"),
-		LETTER_S("letter_s", "LetterS"),
-		LETTER_T("letter_t", "LetterT"),
-		LETTER_U("letter_u", "LetterU"),
-		LETTER_V("letter_v", "LetterV"),
-		LETTER_W("letter_w", "LetterW"),
-		LETTER_X("letter_x", "LetterX"),
-		LETTER_Y("letter_y", "LetterY"),
-		LETTER_Z("letter_z", "LetterZ");
+		LETTER_A("item_letter_a", "LetterA"),
+		LETTER_B("item_letter_b", "LetterB"),
+		LETTER_C("item_letter_c", "LetterC"),
+		LETTER_D("item_letter_d", "LetterD"),
+		LETTER_E("item_letter_e", "LetterE"),
+		LETTER_F("item_letter_f", "LetterF"),
+		LETTER_G("item_letter_g", "LetterG"),
+		LETTER_H("item_letter_h", "LetterH"),
+		LETTER_I("item_letter_i", "LetterI"),
+		LETTER_J("item_letter_j", "LetterJ"),
+		LETTER_K("item_letter_k", "LetterK"),
+		LETTER_L("item_letter_l", "LetterL"),
+		LETTER_M("item_letter_m", "LetterM"),
+		LETTER_N("item_letter_n", "LetterN"),
+		LETTER_O("item_letter_o", "LetterO"),
+		LETTER_P("item_letter_p", "LetterP"),
+		LETTER_Q("item_letter_q", "LetterQ"),
+		LETTER_R("item_letter_r", "LetterR"),
+		LETTER_S("item_letter_s", "LetterS"),
+		LETTER_T("item_letter_t", "LetterT"),
+		LETTER_U("item_letter_u", "LetterU"),
+		LETTER_V("item_letter_v", "LetterV"),
+		LETTER_W("item_letter_w", "LetterW"),
+		LETTER_X("item_letter_x", "LetterX"),
+		LETTER_Y("item_letter_y", "LetterY"),
+		LETTER_Z("item_letter_z", "LetterZ");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -129,10 +129,7 @@ public class Reference {
 		LETTER_W_ORANGE("letter_w_orange", "LetterWOrange"),
 		LETTER_X_ORANGE("letter_x_orange", "LetterXOrange"),
 		LETTER_Y_ORANGE("letter_y_orange", "LetterYOrange"),
-		LETTER_Z_ORANGE("letter_z_orange", "LetterZOrange"),
-		
-		// Default
-		LETTER_ORANGE("letter_orange", "LetterOrange");
+		LETTER_Z_ORANGE("letter_z_orange", "LetterZOrange");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -173,4 +170,25 @@ public class Reference {
 			return registryName;
 		}
 	}
+	public static enum FirstLetterColourBlocks {
+		
+		BLOCK_LETTER_ORANGE("block_letter_orange", "BlockLetterOrange");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		FirstLetterColourBlocks(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
+
 }

@@ -11,18 +11,18 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 
 	// Items
-	public static Item ruby;
+	public static Item RUBY;
 	
 	public static void init() {
-		ruby = new ItemRuby();
+		RUBY = new ItemRuby();
 	}
 	
 	public static void register() {
-		GameRegistry.register(ruby);
+		GameRegistry.register(RUBY);
 	}
 	
 	public static void registerRenders() {
-		registerRender(ruby);
+		registerRender(RUBY);
 	}
 	
 	private static void registerRender(Item item) {

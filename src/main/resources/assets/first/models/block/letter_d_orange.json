@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "first:letters/letter_d_orange"
+        "all": "first:letter_blocks/letter_d_orange"
     }
 }

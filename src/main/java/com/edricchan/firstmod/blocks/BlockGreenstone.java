@@ -1,5 +1,7 @@
-/*
+
 package com.edricchan.firstmod.blocks;
+
+import java.util.Random;
 
 import com.edricchan.firstmod.FirstMod;
 import com.edricchan.firstmod.Reference;
@@ -36,5 +38,9 @@ public class BlockGreenstone extends Block {
 		// Checks if this block can provide redstone power
 		return true;
 	}
+	@Override
+	public int quantityDropped(Random random) {
+		// Random quantity when picked
+		return super.quantityDropped(random);
+	}
 }
-*/
