@@ -8,8 +8,8 @@ import net.minecraft.item.Item;
 public class ItemLetterF extends Item {
 
 	public ItemLetterF() {
-		setUnlocalizedName(Reference.FirstLetters.LETTER_F.getUnlocalizedName());
-		setRegistryName(Reference.FirstLetters.LETTER_F.getRegistryName());
+		setUnlocalizedName(Reference.FirstLetters.ITEM_LETTER_F.getUnlocalizedName());
+		setRegistryName(Reference.FirstLetters.ITEM_LETTER_F.getRegistryName());
 		setCreativeTab(FirstMod.LETTERS_TAB);
 
 	}

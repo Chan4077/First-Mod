@@ -93,35 +93,32 @@ public class ModLetters {
 	}
 	
 	public static void register() {
-		registerItem(ITEM_LETTER_A);
-		registerItem(ITEM_LETTER_B);
-		registerItem(ITEM_LETTER_C);
-		registerItem(ITEM_LETTER_D);
-		registerItem(ITEM_LETTER_E);
-		registerItem(ITEM_LETTER_F);
-		registerItem(ITEM_LETTER_G);
-		registerItem(ITEM_LETTER_H);
-		registerItem(ITEM_LETTER_I);
-		registerItem(ITEM_LETTER_J);
-		registerItem(ITEM_LETTER_K);
-		registerItem(ITEM_LETTER_L);
-		registerItem(ITEM_LETTER_M);
-		registerItem(ITEM_LETTER_N);
-		registerItem(ITEM_LETTER_O);
-		registerItem(ITEM_LETTER_P);
-		registerItem(ITEM_LETTER_Q);
-		registerItem(ITEM_LETTER_R);
-		registerItem(ITEM_LETTER_S);
-		registerItem(ITEM_LETTER_T);
-		registerItem(ITEM_LETTER_U);
-		registerItem(ITEM_LETTER_V);
-		registerItem(ITEM_LETTER_W);
-		registerItem(ITEM_LETTER_X);
-		registerItem(ITEM_LETTER_Y);
-		registerItem(ITEM_LETTER_Z);
-	}
-	private static void registerItem(Item item) {
-		GameRegistry.register(item);
+		GameRegistry.register(ITEM_LETTER_A);
+		GameRegistry.register(ITEM_LETTER_B);
+		GameRegistry.register(ITEM_LETTER_C);
+		GameRegistry.register(ITEM_LETTER_D);
+		GameRegistry.register(ITEM_LETTER_E);
+		GameRegistry.register(ITEM_LETTER_F);
+		GameRegistry.register(ITEM_LETTER_G);
+		GameRegistry.register(ITEM_LETTER_H);
+		GameRegistry.register(ITEM_LETTER_I);
+		GameRegistry.register(ITEM_LETTER_J);
+		GameRegistry.register(ITEM_LETTER_K);
+		GameRegistry.register(ITEM_LETTER_L);
+		GameRegistry.register(ITEM_LETTER_M);
+		GameRegistry.register(ITEM_LETTER_N);
+		GameRegistry.register(ITEM_LETTER_O);
+		GameRegistry.register(ITEM_LETTER_P);
+		GameRegistry.register(ITEM_LETTER_Q);
+		GameRegistry.register(ITEM_LETTER_R);
+		GameRegistry.register(ITEM_LETTER_S);
+		GameRegistry.register(ITEM_LETTER_T);
+		GameRegistry.register(ITEM_LETTER_U);
+		GameRegistry.register(ITEM_LETTER_V);
+		GameRegistry.register(ITEM_LETTER_W);
+		GameRegistry.register(ITEM_LETTER_X);
+		GameRegistry.register(ITEM_LETTER_Y);
+		GameRegistry.register(ITEM_LETTER_Z);
 	}
 	public static void registerRenders() {
 		registerRender(ITEM_LETTER_A);
