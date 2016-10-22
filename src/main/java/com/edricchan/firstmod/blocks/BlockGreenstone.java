@@ -1,4 +1,4 @@
-
+/*
 package com.edricchan.firstmod.blocks;
 
 import java.util.Random;
@@ -44,3 +44,4 @@ public class BlockGreenstone extends Block {
 		return super.quantityDropped(random);
 	}
 }
+*/
