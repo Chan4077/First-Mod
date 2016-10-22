@@ -171,7 +171,7 @@ public class Reference {
 		}
 	}
 	public static enum FirstLetterColourBlocks {
-		
+		BlOCK_LETTER("block_letter", "BlockLetter"),
 		BLOCK_LETTER_ORANGE("block_letter_orange", "BlockLetterOrange");
 		
 		private String unlocalizedName;
