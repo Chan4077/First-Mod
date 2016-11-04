@@ -52,4 +52,4 @@ By the way, please use 1.10.2 forge source code, not 1.9 or 1.8!
 - This file is in .github, FYI
 - For more help, refer here: [Github Help](https://help.github.com)
 - How to download Forge's source code: [TUTORIAL (YouTube - MrCrayfish)](https://www.youtube.com/watch?v=jFBuf_aGmec)
-- Minecraft Forge is developed [here](https://github.com/MinecraftForge/MinecraftForge) or @MinecraftForge
+- Minecraft Forge is developed [here](https://github.com/MinecraftForge/MinecraftForge)
