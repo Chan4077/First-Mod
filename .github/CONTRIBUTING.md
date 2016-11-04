@@ -8,8 +8,8 @@
 
 ---
 ## A note before you contribute
-Please take note that your commit will benefit me and whoever else is working on this repo. I can't be the only one working on this website. You, too, can contribute to the hard work that I have put into this repo by adding a commit.
-Note that your commit may affect the website in terms of design, loading and scripting. Therefore, you should fork [this repo](https://help.github.com/articles/fork-a-repo/) to help me make this project last.
+Please take note that your commit will benefit me and whoever else is working on this repo. I can't be the only one working on this mod. You, too, can contribute to the hard work that I have put into this repo by adding a commit.
+Note that your commit may affect the mod in terms of stability, crashing and rendering. Therefore, you should fork [this repo](https://help.github.com/articles/fork-a-repo/) to help me make this project last.
 Without your support, this would not be possible. Anyways, enough of the yabba gabba. On to the docs!
 
 ---
@@ -19,6 +19,7 @@ If you would like to contribute, you need the following:
 
 - Have a Github account **(Required to contribute)**
 - Know how to [fork](https://help.github.com/articles/fork-a-repo/), [create](https://help.github.com/articles/create-a-repo/), [add a pull request](https://help.github.com/articles/creating-a-pull-request/) and [add an issue](https://help.github.com/articles/creating-an-issue/) to a repository **(Required)**
+- Know how to write Java **(Required)**
 - Be willing to have time to contribute **(Optional, but necessary)**
 - Know how to make blocks, items, custom things etc. **(Required)**
 - Know how to install an IDE (such as [Eclipse](https://www.eclipse.org)) **(Required)**
