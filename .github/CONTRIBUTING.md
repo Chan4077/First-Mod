@@ -31,7 +31,7 @@ By the way, please use 1.10.2 forge source code, not 1.9 or 1.8!
 - Make sure that you read this before commiting **(Required)**
 - Make sure that you **do not** add irrelevant things _(code that does not do anything etc.)_
   - Also note that this code might affect the mod, so beware!
-- Make sure that you agree to the Code of Conduct **(Coming Soon)**
+- Make sure that you agree to the Code of Conduct [here](https://github.com/Chan4077/COC/blob/master/CODE_OF_CONDUCT.md) **(Required)**
 - Make sure that the code you input will not cause rendering errors, crashing of Minecraft etc. **(Required)**
 
 ## Making changes to the projects
