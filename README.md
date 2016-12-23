@@ -17,6 +17,7 @@ If you would like to build this project from scratch, read [here](/README.txt).
 ## Screenshots
 ### Creative Tabs
 _Note: This is in **order of tabs**_
+
 Main Tab:
 ![Main Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/main_tab.jpg)
 
