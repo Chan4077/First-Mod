@@ -2,6 +2,7 @@
 - [Welcome to the repo!](#welcome-to-the-repo-)
 - [Contributing](#contributing)
 - [Screenshots](#screenshots)
+  - [Creative Tabs](#creative-tabs)
 - [Website](#website)
 - [Notes](#notes)
 
@@ -14,7 +15,22 @@ If you would like to build this project from scratch, read [here](/README.txt).
 * Or you can also create an issue addressing your request.
 
 ## Screenshots
-_(COMING SOON)_
+### Creative Tabs
+_Note: This is in **order of tabs**_
+Main Tab:
+![Main Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/main_tab.jpg)
+
+Food Tab:
+![Food Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/food_tab.jpg)
+
+Letter Blocks Tab:
+![Letter Blocks Tab](https://github.com/Chan4077/First-Mod/blob/master/img/screenshots/tabs/letter_blocks_tab.jpg)
+
+Letters Tab:
+![Letters Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/letters_tab.jpg)
+
+Letter Colour Blocks Tab:
+![Letter Colour Blocks Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/letter_colour_blocks_tab.jpg)
 
 ## Website
 Website located [here](https://chan4077.github.io/First-Mod)
