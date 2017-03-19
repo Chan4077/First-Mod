@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "first:block_letter_q"},
+        "inventory": { "model": "first:block_letter_q"}
+    }
+}

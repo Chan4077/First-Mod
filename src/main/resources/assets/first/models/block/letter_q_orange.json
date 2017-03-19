@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "first:letter_blocks/letter_q_orange"
-    }
-}

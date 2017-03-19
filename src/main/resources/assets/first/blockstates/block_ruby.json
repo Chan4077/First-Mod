@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "first:block_ruby"},
+        "inventory": { "model": "first:block_ruby"}
+    }
+}

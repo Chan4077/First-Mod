@@ -29,8 +29,8 @@ item.letter_x.name=Letter X
 item.letter_y.name=Letter Y
 item.letter_z.name=Letter Z
 
-tile.chair.name=Chair
-tile.cheese_block.name=Cheese Block
+tile.block_chair.name=Chair
+tile.block_cheese.name=Cheese Block
 tile.ruby_block.name=Ruby Block
 tile.letter_a_orange.name=Letter A (Orange)
 tile.letter_b_orange.name=Letter B (Orange)
@@ -59,8 +59,8 @@ tile.letter_x_orange.name=Letter X (Orange)
 tile.letter_y_orange.name=Letter Y (Orange)
 tile.letter_z_orange.name=Letter Z (Orange)
 
-itemGroup.tabFirst=First Mod
-itemGroup.lettersTab=First Mod - Letters
-itemGroup.letterColourBlocksTab=First Mod - Letter Colour Blocks
-itemGroup.letterBlocksTab=First Mod - Letter Blocks
-itemGroup.foodTab=First Mod - Foods
+itemGroup.first_items=First Mod - Items
+itemGroup.first_foods=First Mod - Foods
+itemGroup.first_blocks=First Mod - Blocks
+itemGroup.first_letter_blocks=First Mod - Letter Blocks
+itemGroup.first_misc=First Mod - Misc

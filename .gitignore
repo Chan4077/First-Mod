@@ -20,4 +20,6 @@ build
 # other
 eclipse
 run
+
+# macOS stuff
 .DS_Store

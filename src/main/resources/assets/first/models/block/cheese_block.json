@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "first:blocks/cheese_block"
-        
-    }
-}

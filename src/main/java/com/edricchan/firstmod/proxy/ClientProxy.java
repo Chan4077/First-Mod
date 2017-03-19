@@ -1,22 +1,13 @@
 package com.edricchan.firstmod.proxy;
 
-import com.edricchan.firstmod.init.ModBlocks;
-import com.edricchan.firstmod.init.ModFoods;
-import com.edricchan.firstmod.init.ModItems;
-import com.edricchan.firstmod.init.ModLetterColourBlocks;
-import com.edricchan.firstmod.init.ModLetters;
-import com.edricchan.firstmod.init.ModLetterBlocks;
+import com.edricchan.firstmod.handlers.BlockHandler;
+import com.edricchan.firstmod.handlers.ItemHandler;
 
-public class ClientProxy implements CommonProxy {
+public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void init() {
-		ModItems.registerRenders();
-		ModBlocks.registerRenders();
-		ModLetterBlocks.registerRenders();
-		ModFoods.registerRenders();
-		ModLetterColourBlocks.registerRenders();
-		ModLetters.registerRenders();
+		ItemHandler.registerRenders();
+		BlockHandler.registerRenders();
 	}
-
 }

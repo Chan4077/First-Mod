@@ -38,4 +38,4 @@ Website located [here](https://chan4077.github.io/First-Mod)
 
 ## Notes
 * For those asking to update to a specific version, please create a new issue!
-* Unfortunately, I won't be updating to 1.11 _yet_ as I do not have time! **So please do not spam me with requests to update!**
+* Unfortunately, ~~I won't be updating to 1.11 _yet_ as I do not have time!~~ UPDATE: I will be updating soon! ~~**So please do not spam me with requests to update!**~~
