@@ -25,29 +25,30 @@ If you would like to contribute, you need the following:
 - Know how to install an IDE (such as [Eclipse](https://www.eclipse.org)) **(Required)**
 - Know how to debug code **(Required)**
 
-By the way, please use 1.10.2 forge source code, not 1.9 or 1.8!
+By the way, please use `1.11.2` forge source code, not `1.9` or `1.8`!
 
 ## Making changes to the code
 - Make sure that you read this before commiting **(Required)**
 - Make sure that you **do not** add irrelevant things _(code that does not do anything etc.)_
-  - Also note that this code might affect the mod, so beware!
+  - Also note that the changes you make to the code might affect the mod, so beware!
 - Make sure that you agree to the Code of Conduct [here](https://github.com/Chan4077/COC/blob/master/CODE_OF_CONDUCT.md) **(Required)**
 - Make sure that the code you input will not cause rendering errors, crashing of Minecraft etc. **(Required)**
 
 ## Making changes to the projects
-- Make sure you know about Github's new [Project](https://help.github.com/articles/tracking-the-progress-of-your-work-with-projects/) feature! **(DEFINITELY Required)**
+- Make sure you know about Github's [Project](https://help.github.com/articles/tracking-the-progress-of-your-work-with-projects/) feature! **(DEFINITELY Required)**
   - Make sure you also know how to [create an issue or pull request](https://help.github.com/articles/adding-issues-and-pull-requests-to-a-project/) from Projects **(Required)**
+  - Make sure you know how to add issues to projects **(Required)**
   
 ## Making changes to the wiki
 - Make sure that you write appropriately **(Important)**
   - **No** spam _(LOLOL etc.)_
   - **No** vulgarities _(F~~~ etc.)_
   - **No** code that is misleading _(What you have to do is to do etc.)_
-- Make sure that you add a commit referencing what you added **(Required)**
+- Make sure that you write a message referencing what you have added **(Required)**
 
 ---
 ## Notes
-- This file was last edited on 4 Nov 2016
+- This file was last edited on 19 March 2017
 - You may treat this as merely guidelines for commiting, these text will not force you to do things.
 - Note that there might be some exceptions to the guidelines
 - This file is in .github, FYI
