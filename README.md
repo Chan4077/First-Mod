@@ -1,6 +1,7 @@
 <!--START BADGES-->
 [![GitHub release](https://img.shields.io/github/release/Chan4077/First-Mod.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/Chan4077/First-Mod.svg)]()
+[![Discord](https://img.shields.io/discord/320206072562450432.svg)](https://discord.gg/WUqSmCc)
 
 <!--END BADGES-->
 # Table of contents
