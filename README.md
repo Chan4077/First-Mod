@@ -32,7 +32,7 @@ Food Tab:
 ![Food Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/food_tab.jpg)
 
 Letter Blocks Tab:
-![Letter Blocks Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/blob/master/img/screenshots/tabs/letter_blocks_tab.jpg)
+![Letter Blocks Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/letter_blocks_tab.jpg)
 
 Letters Tab:
 ![Letters Tab](https://raw.githubusercontent.com/Chan4077/First-Mod/master/img/screenshots/tabs/letters_tab.jpg)
