@@ -1,3 +1,8 @@
+<!--START BADGES-->
+[![GitHub release](https://img.shields.io/github/release/Chan4077/First-Mod.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/Chan4077/First-Mod.svg)]()
+
+<!--END BADGES-->
 # Table of contents
 - [Welcome to the repo!](#welcome-to-the-repo-)
 - [Contributing](#contributing)
@@ -7,11 +12,6 @@
 - [Notes](#notes)
 
 ---
-<!--START BADGES-->
-[![GitHub release](https://img.shields.io/github/release/Chan4077/First-Mod.svg)]()
-[![GitHub issues](https://img.shields.io/github/issues/Chan4077/First-Mod.svg)]()
-
-<!--END BADGES-->
 ## Welcome to the repo!
 If you would like to build this project from scratch, read [here](/README.txt).
 
