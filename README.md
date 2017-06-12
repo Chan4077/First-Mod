@@ -48,6 +48,8 @@ Website located [here](https://chan4077.github.io/First-Mod)
 * For those asking to update to a specific version, please create a new issue!
 * There will be an update to 1.12 by this month! :tada:
 * For more information on the crafting recipes, view [here](https://github.com/Chan4077/First-Mod/wiki/Crafting-Recipes)
+* For more information on block and item IDs, view [here](https://github.com/Chan4077/First-Mod/wiki/IDs)
+* **View the wiki for more information!**
 
 ## Social media
 [![Twitter Follow](https://img.shields.io/twitter/follow/EdricChan03.svg?style=social&label=Follow%20for%20updates!)](https://twitter.com/EdricChan03)
