@@ -1,4 +1,5 @@
 <!--START BADGES-->
+<!-- Badges from shields.io -->
 [![GitHub release](https://img.shields.io/github/release/Chan4077/First-Mod.svg)](https://github.com/Chan4077/First-Mod/releases)
 [![GitHub issues](https://img.shields.io/github/issues/Chan4077/First-Mod.svg)](https://github.com/Chan4077/First-Mod/issues)
 [![Discord](https://img.shields.io/discord/320206072562450432.svg?label=Discord)](https://discord.gg/WUqSmCc)
@@ -45,6 +46,8 @@ Website located [here](https://chan4077.github.io/First-Mod)
 
 ## Notes
 * For those asking to update to a specific version, please create a new issue!
-* Unfortunately, ~~I won't be updating to 1.11 _yet_ as I do not have time!~~ UPDATE: I will be updating soon! ~~**So please do not spam me with requests to update!**~~
+* There will be an update to 1.12 by this month! :tada:
+* For more information on the crafting recipes, view [here](https://github.com/Chan4077/First-Mod/wiki/Crafting-Recipes)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/EdricChan03.svg?style=social&label=Follow%20@EdricChan03)](https://twitter.com/EdricChan03)
+## Social media
+[![Twitter Follow](https://img.shields.io/twitter/follow/EdricChan03.svg?style=social&label=Follow%20for%20updates!)](https://twitter.com/EdricChan03)
