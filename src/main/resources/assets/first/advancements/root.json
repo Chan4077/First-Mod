@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"item": "first:simpleblock"
+		},
+		"title": {
+			"translate": "first.advancements.test.title"
+		},
+		"description": {
+			"translate": "first.advancements.test.description"
+		},
+		"background": "first:blocks/simpleblock"
+	},
+	"criteria": {
+		"simpleblock": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "first:simpleblock"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"experience": 100,
+		"recipes": ["first:simpleblock"]
+	}
+}

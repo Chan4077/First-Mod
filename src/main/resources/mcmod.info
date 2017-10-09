@@ -1,0 +1,13 @@
+[
+{
+  "modid": "first",
+  "name": "Edric's First Mod",
+  "description": "My First Mod.",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Edric Chan"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

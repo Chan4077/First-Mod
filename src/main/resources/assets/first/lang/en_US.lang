@@ -1,0 +1,16 @@
+tile.first.simpleblock.name=Simple Block
+
+itemGroup.first_items=First Mod - Items
+itemGroup.first_blocks=First Mod - Blocks
+itemGroup.first_letter_blocks=First Mod - Letter Blocks
+itemGroup.first_letters=First Mod - Letters
+itemGroup.first_foods=First Mod - Foods
+itemGroup.first_misc=First Mod - Misc
+
+item.first.food_cheese.name=Cheese
+item.first.food_cheese_cookie.name=Cheese Cookie
+item.first.food_cracker.name=Crackers
+item.first.item_ruby.name=Ruby
+
+first.advancements.test.title=First Mod
+first.advancements.test.description=Good job! Somehow you found this block.
