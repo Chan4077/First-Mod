@@ -16,8 +16,9 @@ public class Reference {
 	public static final String MODVERSION = "1.4.2";
 	/**
 	 * The mod's accepted versions (an array)
+	 * NOTE: Only accepts one version (for now)
 	 */
-	public static final String MODACCEPTEDVERSIONS = "[1.12, 1.12.1]";
+	public static final String MODACCEPTEDVERSIONS = "[1.12.2]";
 	/**
 	 * The proxies
 	 */
