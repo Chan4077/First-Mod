@@ -1,13 +1,14 @@
 [
-{
-  "modid": "first",
-  "name": "Edric's First Mod",
-  "description": "My First Mod.",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["Edric Chan"],
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+    {
+        "modid": "first",
+        "name": "Edric's First Mod",
+        "description": "My First Mod. The objectives of this mod is to test out some stuff with Forge!",
+        "url": "https://chan4077.github.io/First-Mod",
+        "updateUrl": "",
+        "authorList": ["Edric Chan"],
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
 ]
+s
