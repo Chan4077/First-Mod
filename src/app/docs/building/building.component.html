@@ -1,17 +1,94 @@
-<h2>Building the source code</h2>
-<p><strong>The following guide assumes that you're have a computer.</strong></p>
+<h1>Building the source code</h1>
+<h2>Prerequisites</h2>
+<p>You will need the following with you:</p>
+<ul>
+	<li>Git (should be pre-installed on Mac, downloads available <a href="https://git-scm.com/downloads">here</a>)</li>
+	<li>Basic knowledge of the terminal/command line <strong>(required)</strong></li>
+	<li>A computer (obviously)</li>
+</ul>
+<h2>Instructions</h2>
 <p>To build the source code, follow these steps:</p>
 <ol>
 	<li>
-		<p>Get Eclipse for your platform (Windows/ macOS) by heading <a href="https://eclipse.org/downloads/eclipse-packages">here</a> and select the Eclipse IDE for Java EE Developers option.</p>
+		<p>Get Eclipse for your platform (Windows/ macOS) by heading
+			<a href="https://eclipse.org/downloads/eclipse-packages">here</a> and select the Eclipse IDE for Java EE Developers option.</p>
 		<figure>
 			<img src="assets/img/guides/building/eclipse_ee_mac.jpg" alt="Eclipse IDE for Java EE Developers (macOS)">
 			<figcaption>Select the Eclipse IDE for Java EE Developers. (The screenshots above are from macOS.)</figcaption>
 		</figure>
 	</li>
 	<li>
-		<p>Clone the project locally to a directory:</p>
-		<code-viewer language="bash">git clone https://github.com/Chan4077/First-Mod.git</code-viewer>
-		<code-viewer language="html">&lt;!DOCTYPE html&gt;</code-viewer>
+		<p>Click on one of the expansion panels to show instructions on setting up for a specific Minecraft version:</p>
+		<mat-accordion>
+
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>Minecraft 1.12 - 1.12.2</mat-panel-title>
+					<mat-panel-description>Instructions for Minecraft 1.12 to 1.12.2 (v2.x)</mat-panel-description>
+				</mat-expansion-panel-header>
+				<h3>Instructions for Minecraft 1.12 - 1.12.2</h3>
+				<p>Execute the following code on the command line:</p>
+				<code-viewer language="bash">git clone https://github.com/Chan4077/First-Mod.git
+git checkout 1.12.2</code-viewer>
+				<p>Or this method (if you're using Git 1.8.3 and above):</p>
+				<code-viewer language="bash">git clone -b 1.12.2 --single-branch https://github.com/Chan4077/First-Mod.git</code-viewer>
+				<p><strong>NOTE:</strong> I'll be merging all my 1.12.x versions to just one branch. For the moment, just get the <code class="docs-code">1.12.2</code> branch!</p>
+			</mat-expansion-panel>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>Minecraft 1.11.2</mat-panel-title>
+					<mat-panel-description>Instructions for Minecraft 1.11.2 (v1.2, v1.2.1)</mat-panel-description>
+				</mat-expansion-panel-header>
+				<p>Execute the following code on the command line:</p>
+				<h3>Instructions for Minecraft 1.11.2</h3>
+				<code-viewer language="bash">git clone https://github.com/Chan4077/First-Mod.git
+git checkout 1.11.2</code-viewer>
+				<p>Or this method (if you're using Git 1.8.3 and above):</p>
+				<code-viewer language="bash">git clone -b 1.11.2 --single-branch https://github.com/Chan4077/First-Mod.git</code-viewer>
+				<p><strong>NOTE:</strong> This version is no longer supported. You can try adding more stuff to it if you want to! (You can also submit a PR!)</p>
+			</mat-expansion-panel>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>Minecraft 1.10.2</mat-panel-title>
+					<mat-panel-description>Instructions for Minecraft 1.10.2 (v1.1)</mat-panel-description>
+				</mat-expansion-panel-header>
+				<h3>Instructions for Minecraft 1.10.2</h3>
+				<p>Execute the following code on the command line:</p>
+				<code-viewer language="bash">git clone https://github.com/Chan4077/First-Mod.git
+git checkout 1.10.2</code-viewer>
+				<p>Or this method (if you're using Git 1.8.3 and above):</p>
+				<code-viewer language="bash">git clone -b 1.10.2 --single-branch https://github.com/Chan4077/First-Mod.git</code-viewer>
+				<p><strong>NOTE:</strong> This version is no longer supported. You can try adding more stuff to it if you want to! (You can also submit a PR!)</p>
+			</mat-expansion-panel>
+		</mat-accordion>
+	</li>
+	<li>
+		<p>Next, run this command on your command line:</p>
+		<mat-accordion>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>Windows</mat-panel-title>
+					<mat-panel-description>Command to run for Windows</mat-panel-description>
+				</mat-expansion-panel-header>
+				<code-viewer language="shell">gradlew.bat setupCIWorkspace
+gradlew.bat build</code-viewer>
+				<p>(Click on the "Copy code" icon button to copy the code and paste it on the command line at the project's directory.)</p>
+			</mat-expansion-panel>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>Mac</mat-panel-title>
+					<mat-panel-description>Command to run for Mac</mat-panel-description>
+				</mat-expansion-panel-header>
+				<code-viewer language="bash">./gradlew setupCIWorkspace
+./gradlew build</code-viewer>
+				<p>(Click on the "Copy code" icon button to copy the code and paste it on the command line at the project's directory.)</p>
+			</mat-expansion-panel>
+		</mat-accordion>
+		<p>For more info about all the commands, view <code class="docs-code">README.txt</code>, available at the project's root directory.</p>
+	</li>
+	<li>
+		<!-- TODO: Replace * with actual path of where built jar files go -->
+		<p>The path to get the JAR file will be at <code class="docs-code">*</code>. Chuck that in your Minecraft's <code class="docs-code">mods</code> folder.</p>
 	</li>
 </ol>
+<p>Done!</p>
