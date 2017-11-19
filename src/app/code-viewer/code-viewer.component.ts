@@ -39,7 +39,6 @@ export class CodeViewerComponent implements AfterViewInit, DoCheck {
         }
     }
     ngAfterViewInit() {
-		console.log(this.content.nativeElement.childNodes);
 		// Checks if the file name input is stated
 		if (this.fileName) {
 			// Yes, the file input is stated
