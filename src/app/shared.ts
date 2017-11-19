@@ -1,21 +1,124 @@
+import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs/Observable';
-import { Injectable, Component, OnInit, ViewChild, DoCheck } from '@angular/core';
-import { MatSnackBarConfig, MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
-import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material/dialog';
-import { MatSelectionList } from '@angular/material/list';
+import { Injectable, Component, OnInit, ViewChild, DoCheck, NgModule } from '@angular/core';
+import { MatSnackBarConfig, MatSnackBar, MatSnackBarRef, SimpleSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialog, MatDialogRef, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
+import { MatCommonModule } from '@angular/material/core';
+import { MatSelectionList, MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ComponentType } from '@angular/cdk/portal';
 import { Title, SafeHtml } from '@angular/platform-browser';
+import { BreakpointObserver, LayoutModule } from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Injectable()
-export class Shared {
-	private currentUser: string;
-	constructor(private snackBar: MatSnackBar, private dialog: MatDialog, private title: Title) { }
+export class SharedInjectable {
+	private _title: string = "";
+	constructor(private snackBar: MatSnackBar, private dialog: MatDialog, private documentTitle: Title, private breakpointObserver: BreakpointObserver) { }
+	private releases: Release[] = [
+		{
+			mcVer: "1.12, 1.12.1, 1.12.2",
+			versions: [
+				{
+					downloadLink: "",
+					version: "v4.x (Not available yet)",
+					notAvailable: true
+				}
+			]
+		},
+		{
+			mcVer: "1.11.2",
+			versions: [
+				{
+					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.2.1/First_Mod-1.11.2-1.2.1.jar",
+					version: "v1.2.1",
+					deprecated: true
+				},
+				{
+					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.2/First_Mod-1.11.2-1.2.jar",
+					version: "v1.2",
+					deprecated: true
+				}
+			]
+		},
+		{
+			mcVer: "1.10.2",
+			versions: [
+				{
+					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.1/First_Mod-1.10.2-1.1.jar",
+					version: "v1.1",
+					unsupported: true
+				}
+			]
+		}
+	]
+	/**
+	 * Gets all releases
+	 * @returns {Release[]}
+	 */
+	public getReleases(): Release[]{
+		return this.releases;
+	}
+	/**
+	 * Gets all releases which are neither unsupported/deprecated
+	 * @returns {Release[]}
+	 */
+	public getSupportedReleases(): Release[] {
+		let supportedReleases: Release[] = [];
+		for(var i=0;i<this.releases.length;i++) {
+			for (var j=0;j<this.releases[i].versions.length;j++) {
+				// Checks if the version is un-unsupported (i.e. supported)
+				if (!this.releases[i].versions[j].unsupported) {
+					// Checks if the version is not deprecated
+					if (!this.releases[i].versions[j].deprecated) {
+						// TODO: Remove this logging
+						console.log(this.releases[i]);
+						// Pushes the specified release to the temporary variable declared earlier on
+						supportedReleases.push(this.releases[i]);
+					}
+				}
+			}
+		}
+		// Once done, return all supported releases
+		return supportedReleases;
+	}
+	/**
+	 * Whether the user is on a mobile device
+	 * @returns {boolean}
+	 */
+	public isMobile(): boolean {
+		if (this.breakpointObserver.isMatched('(max-width: 699px)')) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	/**
+	 * Sets the document's title
+	 * @param {string} title The title of the document to set
+	 */
+	set title(title: string) {
+		this._title = title;
+		if (title !== '') {
+			title = `${title} | `;
+		}
+		this.documentTitle.setTitle(`${title}First-Mod`);
+	}
+	/**
+	 * Returns the document's title
+	 */
+	get title(): string {
+		return this._title;
+	}
 	/**
 	 * Opens a snackBar with the specified params and no return
 	 * @param {SnackBarConfig} opts The options of the snackBar
 	 */
-	public openSnackBar(opts: SnackBarConfig) {
-		this.handleSnackBar(opts);
+	public openSnackBar(opts: SnackBarConfig): MatSnackBarRef<SimpleSnackBar> {
+		return this.handleSnackBar(opts);
 	}
 	/**
 	 * Opens a snackBar with the specified params and a return of the snackBar's ref (for component)
@@ -26,44 +129,12 @@ export class Shared {
 		return this.handleSnackBarWithComponent(opts);
 	}
 	/**
-	 * Opens a snackBar with the specified params and a return of the snackBar's ref (not for component)
-	 * @param {SnackBarConfig} opts The options of the snackBar
-	 * @returns {MatSnackBar<SimpleSnackBar>}
-	 */
-	public openSnackBarWithRef(opts: SnackBarConfig): MatSnackBarRef<SimpleSnackBar> {
-		return this.handleSnackBarWithRef(opts);
-	}
-	/**
-	 * Handling of the snackBar
-	 * @param {SnackBarConfig} opts The snackBar config
-	 * @private
-	 */
-	private handleSnackBar(opts: SnackBarConfig) {
-		if (opts) {
-			if (opts.component) {
-				if (opts.additionalOpts) {
-					this.snackBar.openFromComponent(opts.component, opts.additionalOpts);
-				} else {
-					this.snackBar.openFromComponent(opts.component);
-				}
-			} else {
-				if (opts.action) {
-					this.snackBar.open(opts.msg, opts.action, opts.additionalOpts);
-				} else {
-					this.snackBar.open(opts.msg, undefined, opts.additionalOpts);
-				}
-			}
-		} else {
-			this.throwError("message", "string");
-		}
-	}
-	/**
 	 * Handles a snackBar with a snackBarref if the developer needs a return
 	 * @param {SnackBarConfig} opts The config for the snackBar.
 	 * @returns {MatSnackBarRef<SimpleSnackBar>}
 	 * @private
 	 */
-	private handleSnackBarWithRef(opts: SnackBarConfig): MatSnackBarRef<SimpleSnackBar> {
+	private handleSnackBar(opts: SnackBarConfig): MatSnackBarRef<SimpleSnackBar> {
 		if (opts) {
 			if (opts.action) {
 				let snackBarRef = this.snackBar.open(opts.msg, opts.action, opts.additionalOpts);
@@ -194,19 +265,6 @@ export class Shared {
 	 */
 	private throwError(variable: string, type: string) {
 		throw new Error(`${variable} was not specified. Please ensure that the ${variable} property is specified and that it is of type ${type}.`);
-	}
-	/**
-	 * Sets the document's title
-	 * @param {string} title The title of the document to set
-	 */
-	public setTitle(title: string) {
-		this.title.setTitle(title);
-	}
-	/**
-	 * Returns the document's title
-	 */
-	public getTitle(): string {
-		return this.title.getTitle();
 	}
 }
 
@@ -432,3 +490,49 @@ export interface SelectionDialogOptions {
 	 */
 	selected?: boolean;
 }
+export interface Release {
+	mcVer: string;
+	versions: Version[];
+}
+export interface Version {
+	downloadLink: string;
+	version: string;
+	notAvailable?: boolean;
+	deprecated?: boolean;
+	unsupported?: boolean;
+}
+
+export const SHARED_DIALOGS = [
+	AlertDialog,
+	ConfirmDialog,
+	PromptDialog,
+	SelectionDialog
+]
+@NgModule({
+	imports: [
+		CommonModule,
+		BrowserAnimationsModule,
+		MatCommonModule,
+		MatButtonModule,
+		MatDialogModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatListModule,
+		MatSnackBarModule,
+		FormsModule,
+		LayoutModule
+	],
+	exports: [
+		SHARED_DIALOGS
+	],
+	providers: [
+		SharedInjectable
+	],
+	declarations: [
+		SHARED_DIALOGS
+	],
+	entryComponents: [
+		SHARED_DIALOGS
+	]
+})
+export class SharedModule {}
