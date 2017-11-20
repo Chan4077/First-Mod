@@ -1,0 +1,19 @@
+{
+	"result": {
+		"item": "first:lettermakercontainerblock"
+	},
+	"pattern": [
+		"iii",
+		"ici",
+		"iii"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"i": {
+			"item": "minecraft:iron_block"
+		},
+		"c": {
+			"item": "minecraft:chest"
+		}
+	}
+}

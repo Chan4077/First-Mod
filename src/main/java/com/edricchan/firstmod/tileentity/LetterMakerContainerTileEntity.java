@@ -1,4 +1,4 @@
-package com.edricchan.firstmod.tileentities;
+package com.edricchan.firstmod.tileentity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;

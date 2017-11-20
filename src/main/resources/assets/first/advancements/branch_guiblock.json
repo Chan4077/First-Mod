@@ -1,0 +1,26 @@
+{
+	"display": {
+		"icon": {
+			"item": "first:lettermakercontainerblock"
+		},
+		"title": {
+			"translate": "first.advancements.useful_chest.title"
+		},
+		"description": {
+			"translate": "first.advancements.useful_chest.description"
+		}
+	},
+	"parent": "first:root",
+	"criteria": {
+		"lettermakercontainerblock": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "first:lettermakercontainerblock"
+					}
+				]
+			}
+		}
+	}
+}

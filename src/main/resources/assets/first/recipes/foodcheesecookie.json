@@ -1,0 +1,14 @@
+{
+	"result": {
+		"item": "first:foodcheesecookie"
+	},
+	"ingredients": [
+		{
+			"item": "first:foodcheese"
+		},
+		{
+			"item": "minecraft:cookie"
+		}
+	],
+	"type": "minecraft:crafting_shapeless"
+}

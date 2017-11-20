@@ -19,6 +19,7 @@ public class FirstMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent e)
 	{
+	    // TODO: Remove print line
 		System.out.println("Pre Init");
 		proxy.preInit(e);
 	}
@@ -26,6 +27,7 @@ public class FirstMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent e)
 	{
+        // TODO: Remove print line
 		System.out.println("Init");
 		proxy.init(e);
 	}
@@ -33,6 +35,7 @@ public class FirstMod {
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent e)
 	{
+        // TODO: Remove print line
 		System.out.println("Post Init");
 		proxy.postInit(e);
 	}

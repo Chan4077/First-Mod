@@ -7,13 +7,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
-	@GameRegistry.ObjectHolder("first:food_cheese")
+	@GameRegistry.ObjectHolder("first:foodcheese")
 	public static FoodCheese foodCheese;
-	@GameRegistry.ObjectHolder("first:food_cheese_cookie")
+	@GameRegistry.ObjectHolder("first:foodcheesecookie")
 	public static FoodCheeseCookie foodCheeseCookie;
-	@GameRegistry.ObjectHolder("first:food_cracker")
+	@GameRegistry.ObjectHolder("first:foodcracker")
 	public static FoodCracker foodCracker;
-	@GameRegistry.ObjectHolder("first:item_ruby")
+	@GameRegistry.ObjectHolder("first:itemruby")
 	public static RubyItem itemRuby;
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {

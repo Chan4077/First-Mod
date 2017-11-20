@@ -4,12 +4,12 @@
 			"item": "first:simpleblock"
 		},
 		"title": {
-			"translate": "first.advancements.test.title"
+			"translate": "first.advancements.root.title"
 		},
 		"description": {
-			"translate": "first.advancements.test.description"
+			"translate": "first.advancements.root.description"
 		},
-		"background": "first:blocks/simpleblock"
+		"background": "first:textures/blocks/simpleblock.png"
 	},
 	"criteria": {
 		"simpleblock": {
@@ -25,6 +25,8 @@
 	},
 	"rewards": {
 		"experience": 100,
-		"recipes": ["first:simpleblock"]
+		"recipes": [
+			"first:simpleblock"
+		]
 	}
 }

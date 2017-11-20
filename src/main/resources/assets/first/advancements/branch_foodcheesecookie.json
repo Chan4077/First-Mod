@@ -1,0 +1,26 @@
+{
+	"display": {
+		"icon": {
+			"item": "first:foodcheesecookie"
+		},
+		"title": {
+			"translate": "first.advancements.food_cheese_cookie.title"
+		},
+		"description": {
+			"translate": "first.advancements.food_cheese_cookie.description"
+		}
+	},
+	"parent": "first:branch_foodcheese",
+	"criteria": {
+		"foodcheesecookie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "first:foodcheesecookie"
+					}
+				]
+			}
+		}
+	}
+}

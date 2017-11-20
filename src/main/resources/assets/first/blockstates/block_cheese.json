@@ -1,6 +1,10 @@
 {
-    "variants": {
-        "normal": { "model": "first:block_cheese"},
-        "inventory": { "model": "first:block_cheese"}
-    }
+	"variants": {
+		"normal": {
+			"model": "first:block_cheese"
+		},
+		"inventory": {
+			"model": "first:block_cheese"
+		}
+	}
 }

@@ -5,6 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class CreativeTabHandler {
+	/**
+	 * Creative tab for first mod blocks
+	 */
 	public static CreativeTabs tabBlocks = new CreativeTabs("first_blocks") {
 
 		public ItemStack getTabIconItem() {
@@ -22,11 +25,17 @@ public class CreativeTabHandler {
 //			return new ItemStack(ItemHandler.itemLetterA);
 //		}
 //	};
+	/**
+	 * Creative tab for first mod blocks
+	 */
 	public static CreativeTabs tabFoods = new CreativeTabs("first_foods") {
 		public ItemStack getTabIconItem() {
 			return new ItemStack(ModItems.foodCheese);
 		}
 	};
+	/**
+	 * Creative tab for first mod blocks
+	 */
 	public static CreativeTabs tabItems = new CreativeTabs("first_items") {
 		public ItemStack getTabIconItem() {
 			return new ItemStack(ModItems.itemRuby);

@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "first:foodcheese"
+		},
+		"title": {
+			"translate": "first.advancements.food_cheese.title"
+		},
+		"description": {
+			"translate": "first.advancements.food_cheese.description",
+			"italic": true
+		}
+	},
+	"parent": "first:root",
+	"criteria": {
+		"foodcheese": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "first:foodcheese"
+					}
+				]
+			}
+		}
+	}
+}
