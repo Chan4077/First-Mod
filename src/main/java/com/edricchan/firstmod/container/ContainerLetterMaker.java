@@ -1,6 +1,6 @@
 package com.edricchan.firstmod.container;
 
-import com.edricchan.firstmod.tileentity.LetterMakerContainerTileEntity;
+import com.edricchan.firstmod.tileentity.TileEntityLetterMaker;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
@@ -10,13 +10,11 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-import javax.annotation.Nullable;
+public class ContainerLetterMaker extends Container {
 
-public class LetterMakerContainer extends Container {
+	private TileEntityLetterMaker te;
 
-	private LetterMakerContainerTileEntity te;
-
-	public LetterMakerContainer(InventoryPlayer playerInv, final LetterMakerContainerTileEntity letterMaker) {
+	public ContainerLetterMaker(InventoryPlayer playerInv, final TileEntityLetterMaker letterMaker) {
 		IItemHandler inventory = letterMaker.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
 		addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35) {
 			@Override
@@ -36,29 +34,36 @@ public class LetterMakerContainer extends Container {
 		}
 	}
 
-	@Nullable
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
-		ItemStack itemstack = null;
-		Slot slot = this.inventorySlots.get(index);
+	public ItemStack transferStackInSlot(EntityPlayer player, int index) {
+		ItemStack itemstack = ItemStack.EMPTY;
+		Slot slot = inventorySlots.get(index);
 
 		if (slot != null && slot.getHasStack()) {
 			ItemStack itemstack1 = slot.getStack();
 			itemstack = itemstack1.copy();
 
-			if (index < LetterMakerContainerTileEntity.SIZE) {
-				if (!this.mergeItemStack(itemstack1, LetterMakerContainerTileEntity.SIZE, this.inventorySlots.size(), true)) {
-					return null;
+			int containerSlots = inventorySlots.size() - player.inventory.mainInventory.size();
+
+			if (index < containerSlots) {
+				if (!this.mergeItemStack(itemstack1, containerSlots, inventorySlots.size(), true)) {
+					return ItemStack.EMPTY;
 				}
-			} else if (!this.mergeItemStack(itemstack1, 0, LetterMakerContainerTileEntity.SIZE, false)) {
-				return null;
+			} else if (!this.mergeItemStack(itemstack1, 0, containerSlots, false)) {
+				return ItemStack.EMPTY;
 			}
 
-			if (itemstack1.isEmpty()) {
+			if (itemstack1.getCount() == 0) {
 				slot.putStack(ItemStack.EMPTY);
 			} else {
 				slot.onSlotChanged();
 			}
+
+			if (itemstack1.getCount() == itemstack.getCount()) {
+				return ItemStack.EMPTY;
+			}
+
+			slot.onTake(player, itemstack1);
 		}
 
 		return itemstack;
@@ -66,6 +71,6 @@ public class LetterMakerContainer extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer playerIn) {
-		return te.canInteractWith(playerIn);
+		return true;
 	}
 }

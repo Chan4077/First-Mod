@@ -1,13 +1,13 @@
 {
 	"display": {
 		"icon": {
-			"item": "first:lettermakercontainerblock"
+			"item": "first:letter_maker_block"
 		},
 		"title": {
-			"translate": "first.advancements.useful_chest.title"
+			"translate": "first.advancements.letter_maker.title"
 		},
 		"description": {
-			"translate": "first.advancements.useful_chest.description"
+			"translate": "first.advancements.letter_maker.description"
 		}
 	},
 	"parent": "first:root",
@@ -17,7 +17,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "first:lettermakercontainerblock"
+						"item": "first:letter_maker_block"
 					}
 				]
 			}

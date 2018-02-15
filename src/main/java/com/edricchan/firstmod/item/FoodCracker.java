@@ -1,7 +1,7 @@
-package com.edricchan.firstmod.items;
+package com.edricchan.firstmod.item;
 
 import com.edricchan.firstmod.Reference;
-import com.edricchan.firstmod.handlers.CreativeTabHandler;
+import com.edricchan.firstmod.handler.CreativeTabHandler;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,23 +16,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FoodCheeseCookie extends ItemFood {
+public class FoodCracker extends ItemFood {
 	/**
 	 * Params: <code>int amount, float saturation, boolean isWolfFood</code>
 	 */
-	public FoodCheeseCookie() {
-		super(12, 4, true);
-		setRegistryName("foodcheesecookie");
-		setUnlocalizedName(Reference.MODID + ".foodcheesecookie");
+	public FoodCracker() {
+		super(10, 3, true);
+		setRegistryName("food_cracker");
+		setUnlocalizedName(Reference.MODID+".food_cracker");
 		setCreativeTab(CreativeTabHandler.tabFoods);
 	}
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
-		tooltip.add("Cheese added to a cookie = Amazing!");
+		tooltip.add("A yummy cracker! What else do you expect?");
 		if (GuiScreen.isShiftKeyDown()) {
-			tooltip.add("§9Food: Replenishes hunger by 12 shanks§r");
-			tooltip.add("§9Crafting: Cheese + Cookie§r");
+			tooltip.add("§9Food: Replenishes hunger by 10 shanks§r");
+			tooltip.add("§9Crafting: WIP§r");
 			tooltip.add("§9Wolf food: true§r");
 		} else {
 			tooltip.add("§9Press [SHIFT] for more info§r");

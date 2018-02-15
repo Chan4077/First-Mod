@@ -1,9 +1,8 @@
-package com.edricchan.firstmod.blocks;
+package com.edricchan.firstmod.item;
 
 import com.edricchan.firstmod.Reference;
-import com.edricchan.firstmod.handlers.CreativeTabHandler;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import com.edricchan.firstmod.handler.CreativeTabHandler;
+
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -17,20 +16,25 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class SimpleBlock extends Block {
-	public SimpleBlock() {
-		super(Material.CLAY);
-		setUnlocalizedName(Reference.MODID + ".simpleblock");
-		setRegistryName("simpleblock");
-		setCreativeTab(CreativeTabHandler.tabBlocks);
+public class ItemRuby extends Item {
+	public ItemRuby() {
+		setRegistryName("item_ruby");
+		setUnlocalizedName(Reference.MODID+".item_ruby");
+		setCreativeTab(CreativeTabHandler.tabItems);
 	}
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
-		tooltip.add("The most basic block in the world.");
+		tooltip.add("A ruby! Amazing!");
+		if (GuiScreen.isCtrlKeyDown()) {
+			tooltip.add("§6Did you know that this item exists in the minecraft textures?§r");
+			tooltip.add("§6However, it wasn't used at all!§r");
+		} else {
+			tooltip.add("§6Press [CTRL/COMMAND] for some facts!§r");
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
 	}
 }

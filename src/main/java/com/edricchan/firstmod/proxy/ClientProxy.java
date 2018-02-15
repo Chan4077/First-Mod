@@ -1,7 +1,7 @@
 package com.edricchan.firstmod.proxy;
 
-import com.edricchan.firstmod.handlers.ModBlocks;
-import com.edricchan.firstmod.handlers.ModItems;
+import com.edricchan.firstmod.handler.ModBlocks;
+import com.edricchan.firstmod.handler.ModItems;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;

@@ -9,16 +9,15 @@ public class Reference {
 	/**
 	 * The mod's name
 	 */
-	public static final String MODNAME = "Edric's First Mod";
+	public static final String MOD_NAME = "Edric's First Mod";
 	/**
 	 * The mod's current version
 	 */
-	public static final String MODVERSION = "1.4.2";
+	public static final String MOD_VERSION = "2.0.0";
 	/**
 	 * The mod's accepted versions (an array)
-	 * NOTE: Only accepts one version (for now)
 	 */
-	public static final String MODACCEPTEDVERSIONS = "[1.12.2]";
+	public static final String MOD_ACCEPTED_VERSIONS = "[1.12, 1.12.2]";
 	/**
 	 * The proxies
 	 */

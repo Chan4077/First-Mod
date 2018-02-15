@@ -1,14 +1,19 @@
 {
 	"result": {
-		"item": "first:foodcheesecookie"
+		"item": "first:food_cheese_cookie"
 	},
-	"ingredients": [
-		{
-			"item": "first:foodcheese"
+	"pattern": [
+		"ccc",
+		"coc",
+		"ccc"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"c": {
+			"item": "first:food_cheese"
 		},
-		{
+		"o": {
 			"item": "minecraft:cookie"
 		}
-	],
-	"type": "minecraft:crafting_shapeless"
+	}
 }

@@ -1,20 +1,20 @@
-package com.edricchan.firstmod.handlers;
+package com.edricchan.firstmod.handler;
 
-import com.edricchan.firstmod.items.*;
+import com.edricchan.firstmod.item.*;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
-	@GameRegistry.ObjectHolder("first:foodcheese")
+	@GameRegistry.ObjectHolder("first:food_cheese")
 	public static FoodCheese foodCheese;
-	@GameRegistry.ObjectHolder("first:foodcheesecookie")
+	@GameRegistry.ObjectHolder("first:food_cheese_cookie")
 	public static FoodCheeseCookie foodCheeseCookie;
-	@GameRegistry.ObjectHolder("first:foodcracker")
+	@GameRegistry.ObjectHolder("first:food_cracker")
 	public static FoodCracker foodCracker;
-	@GameRegistry.ObjectHolder("first:itemruby")
-	public static RubyItem itemRuby;
+	@GameRegistry.ObjectHolder("first:item_ruby")
+	public static ItemRuby itemRuby;
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
 		foodCheese.initModel();

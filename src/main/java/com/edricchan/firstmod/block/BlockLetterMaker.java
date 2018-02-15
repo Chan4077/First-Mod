@@ -1,9 +1,10 @@
-package com.edricchan.firstmod.blocks;
+package com.edricchan.firstmod.block;
 
 import com.edricchan.firstmod.FirstMod;
 import com.edricchan.firstmod.Reference;
-import com.edricchan.firstmod.handlers.CreativeTabHandler;
-import com.edricchan.firstmod.tileentity.LetterMakerContainerTileEntity;
+import com.edricchan.firstmod.handler.CreativeTabHandler;
+import com.edricchan.firstmod.handler.GuiHandler;
+import com.edricchan.firstmod.tileentity.TileEntityLetterMaker;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -26,19 +27,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class LetterMakerBlock extends Block implements ITileEntityProvider {
+public class BlockLetterMaker extends Block implements ITileEntityProvider {
 
-	public static final int GUI_ID = 1;
-
-	public LetterMakerBlock() {
+	public BlockLetterMaker() {
 		super(Material.ROCK);
-		setUnlocalizedName(Reference.MODID + ".lettermakercontainerblock");
-		setRegistryName("lettermakercontainerblock");
+		setUnlocalizedName(Reference.MODID + ".letter_maker_block");
+		setRegistryName("letter_maker_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("This chest is the most useful block in the whole world!");
 		if (GuiScreen.isAltKeyDown()) {
 			tooltip.add("§cBut seriously, why on earth would you craft it?§r");
@@ -46,27 +45,23 @@ public class LetterMakerBlock extends Block implements ITileEntityProvider {
 			tooltip.add("§cPress [ALT] for more info§r");
 		}
 	}
+
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World world, int meta) {
-		return new LetterMakerContainerTileEntity();
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (!world.isRemote) {
+			player.openGui(FirstMod.instance, GuiHandler.LETTERMAKER, world, pos.getX(), pos.getY(), pos.getZ());
+		}
+		return true;
 	}
 
-
+	@Nullable
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (world.isRemote) {
-			return true;
-		}
-		TileEntity te = world.getTileEntity(pos);
-		if (!(te instanceof LetterMakerContainerTileEntity)) {
-			return false;
-		}
-		player.openGui(FirstMod.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
-		return true;
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+		return new TileEntityLetterMaker();
 	}
 }

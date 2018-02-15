@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "first:simpleblock"
+			"item": "first:simple_block"
 		},
 		"title": {
 			"translate": "first.advancements.root.title"
@@ -9,7 +9,7 @@
 		"description": {
 			"translate": "first.advancements.root.description"
 		},
-		"background": "first:textures/blocks/simpleblock.png"
+		"background": "first:textures/blocks/simple_block.png"
 	},
 	"criteria": {
 		"simpleblock": {
@@ -17,7 +17,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "first:simpleblock"
+						"item": "first:simple_block"
 					}
 				]
 			}
@@ -26,7 +26,7 @@
 	"rewards": {
 		"experience": 100,
 		"recipes": [
-			"first:simpleblock"
+			"first:simple_block"
 		]
 	}
 }

@@ -1,5 +1,5 @@
-tile.first.simpleblock.name=Simple Block
-tile.first.lettermakercontainerblock.name=Letter Maker Block
+tile.first.simple_block.name=Simple Block
+tile.first.letter_maker_block.name=Letter Maker Block
 
 itemGroup.first_items=First Mod - Items
 itemGroup.first_blocks=First Mod - Blocks
@@ -8,15 +8,15 @@ itemGroup.first_letters=First Mod - Letters
 itemGroup.first_foods=First Mod - Foods
 itemGroup.first_misc=First Mod - Misc
 
-item.first.foodcheese.name=Cheese
-item.first.foodcheesecookie.name=Cheese Cookie
-item.first.foodcracker.name=Crackers
-item.first.itemruby.name=Ruby
+item.first.food_cheese.name=Cheese
+item.first.food_cheese_cookie.name=Cheese Cookie
+item.first.food_cracker.name=Crackers
+item.first.item_ruby.name=Ruby
 
 first.advancements.root.title=First Mod
 first.advancements.root.description=Good job! Somehow you found this block.
-first.advancements.useful_chest.title=Best chest ever
-first.advancements.useful_chest.description=WOW! You just made the best chest in the entire Minecraft world! (You wanted 9 slots right?)
+first.advancements.letter_maker.title=Letter maker generator!
+first.advancements.letter_maker.description=Good job! You managed to find the letter maker!
 first.advancements.food_cheese.title=Cheesy
 first.advancements.food_cheese.description=I know it's cheesy. But I feel grate.
 first.advancements.food_cheese_cookie.title=Cheese + Cookie

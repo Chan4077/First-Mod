@@ -1,25 +1,22 @@
 package com.edricchan.firstmod.gui;
 
 import com.edricchan.firstmod.Reference;
-import com.edricchan.firstmod.container.LetterMakerContainer;
-import com.edricchan.firstmod.handlers.ModBlocks;
-import com.edricchan.firstmod.tileentity.LetterMakerContainerTileEntity;
+import com.edricchan.firstmod.handler.ModBlocks;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
-public class LetterMakerContainerGui extends GuiContainer {
+public class GuiLetterMaker extends GuiContainer {
 	public static final int WIDTH = 176;
 	public static final int HEIGHT = 180;
 	private InventoryPlayer playerInv;
 	private static final ResourceLocation background = new ResourceLocation(Reference.MODID, "textures/gui/lettermakercontainer.png");
 
-	public LetterMakerContainerGui(Container container, InventoryPlayer playerInv) {
+	public GuiLetterMaker(Container container, InventoryPlayer playerInv) {
 		super(container);
 		this.playerInv = playerInv;
 	}
@@ -48,7 +45,7 @@ public class LetterMakerContainerGui extends GuiContainer {
 	}
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		String name = I18n.format(ModBlocks.letterMakerContainerBlock.getUnlocalizedName() + ".name");
+		String name = I18n.format(ModBlocks.blockLetterMaker.getUnlocalizedName() + ".name");
 		fontRenderer.drawString(name, xSize / 2 - fontRenderer.getStringWidth(name) / 2, 6, 0x404040);
 		fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0x404040);
 	}

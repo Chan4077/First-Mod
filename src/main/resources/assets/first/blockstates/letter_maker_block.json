@@ -1,7 +1,7 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "first:lettermakercontainerblock"
+		"model": "first:letter_maker_block"
 	},
 	"variants": {
 		"normal": [
