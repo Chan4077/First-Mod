@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": {
-			"item": "first:foodcheese"
+			"item": "first:food_cheese"
 		},
 		"title": {
 			"translate": "first.advancements.food_cheese.title"
@@ -18,7 +18,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "first:foodcheese"
+						"item": "first:food_cheese"
 					}
 				]
 			}

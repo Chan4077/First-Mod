@@ -26,11 +26,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class LetterMakerContainerBlock extends Block implements ITileEntityProvider {
+public class LetterMakerBlock extends Block implements ITileEntityProvider {
 
 	public static final int GUI_ID = 1;
 
-	public LetterMakerContainerBlock() {
+	public LetterMakerBlock() {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.MODID + ".lettermakercontainerblock");
 		setRegistryName("lettermakercontainerblock");
