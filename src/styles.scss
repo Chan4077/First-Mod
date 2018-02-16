@@ -65,6 +65,7 @@ img {
 
 .page-title {
     background-color: #673ab7;
+    z-index: -1;
 }
 
 .page-title h1 {
@@ -211,19 +212,21 @@ p:not([override]) {
     text-decoration: underline;
 }
 
+
 /* Styles adapted from angular.io */
 
 mat-sidenav-content::-webkit-scrollbar-thumb {
     background-color: #ffc400;
-	border-radius: 4px;
-	box-shadow: inset 0px 2px 1px -1px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.14), inset 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-	&:hover {
-		background-color: #ffab00;
-	}
+    border-radius: 4px;
+    box-shadow: inset 0px 2px 1px -1px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.14), inset 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    &:hover {
+        background-color: #ffab00;
+    }
 }
+
 mat-sidenav-content::-webkit-scrollbar {
     height: 10px;
-	width: 10px;
-	background-color: #e0e0e0;
-	border: 1px solid #bdbdbd;
+    width: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #bdbdbd;
 }
