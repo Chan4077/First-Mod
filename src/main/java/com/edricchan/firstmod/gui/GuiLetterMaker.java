@@ -34,12 +34,6 @@ public class GuiLetterMaker extends GuiContainer {
 		mc.getTextureManager().bindTexture(background);
 		int x = (width - xSize) / 2;
 		int y = (height - ySize) / 2;
-		System.out.println("X: " + x);
-		System.out.println("Y: " + y);
-		System.out.println("xSize: " + xSize);
-		System.out.println("ySize: " + ySize);
-		System.out.println("Width: " + width);
-		System.out.println("Height: " + height);
 		drawTexturedModalRect(x, y, 0, 0, WIDTH, HEIGHT);
 	}
 

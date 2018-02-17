@@ -34,13 +34,14 @@ public class BlockLetterMaker extends Block implements ITileEntityProvider {
 		setUnlocalizedName(Reference.MOD_ID + ".letter_maker_block");
 		setRegistryName("letter_maker_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
+		setHardness(1.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add("This chest is the most useful block in the whole world!");
+		tooltip.add("This block is used for making letters!");
 		if (GuiScreen.isAltKeyDown()) {
-			tooltip.add("§cBut seriously, why on earth would you craft it?§r");
+			tooltip.add("§cBut seriously, you should probably just use some other letter mod!§r");
 		} else {
 			tooltip.add("§cPress [ALT] for more info§r");
 		}
@@ -55,6 +56,7 @@ public class BlockLetterMaker extends Block implements ITileEntityProvider {
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
 			player.openGui(FirstMod.instance, GuiHandler.LETTER_MAKER, world, pos.getX(), pos.getY(), pos.getZ());
+			return true;
 		}
 		return true;
 	}

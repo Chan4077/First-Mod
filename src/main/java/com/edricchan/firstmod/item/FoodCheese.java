@@ -25,7 +25,6 @@ public class FoodCheese extends ItemFood {
 		setRegistryName("food_cheese");
 		setUnlocalizedName(Reference.MOD_ID + ".food_cheese");
 		setCreativeTab(CreativeTabHandler.tabFoods);
-
 	}
 
 	@SideOnly(Side.CLIENT)
