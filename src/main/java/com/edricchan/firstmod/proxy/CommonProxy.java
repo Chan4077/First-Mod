@@ -50,7 +50,7 @@ public class CommonProxy {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().register(new BlockSimple());
 		event.getRegistry().register(new BlockLetterMaker());
-		GameRegistry.registerTileEntity(TileEntityLetterMaker.class, Reference.MODID + "_letter_maker_block");
+		GameRegistry.registerTileEntity(TileEntityLetterMaker.class, Reference.MOD_ID + "_letter_maker_block");
 	}
 
 	/**
