@@ -5,7 +5,7 @@ public class Reference {
 	/**
 	 * The mod's id
 	 */
-	public static final String MODID = "first";
+	public static final String MOD_ID = "first";
 	/**
 	 * The mod's name
 	 */
