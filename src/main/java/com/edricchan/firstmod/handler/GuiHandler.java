@@ -11,12 +11,12 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler {
 
-	public static final int LETTERMAKER = 1;
+	public static final int LETTER_MAKER = 1;
 
 	@Override
 	public Container getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		switch (ID) {
-			case LETTERMAKER:
+			case LETTER_MAKER:
 				return new ContainerLetterMaker(player.inventory, (TileEntityLetterMaker) world.getTileEntity(new BlockPos(x, y, z)));
 			default:
 				return null;
@@ -26,7 +26,7 @@ public class GuiHandler implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		switch (ID) {
-			case LETTERMAKER:
+			case LETTER_MAKER:
 				return new GuiLetterMaker(getServerGuiElement(ID, player, world, x, y, z), player.inventory);
 			default:
 				return null;

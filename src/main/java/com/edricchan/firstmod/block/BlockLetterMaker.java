@@ -31,7 +31,7 @@ public class BlockLetterMaker extends Block implements ITileEntityProvider {
 
 	public BlockLetterMaker() {
 		super(Material.ROCK);
-		setUnlocalizedName(Reference.MODID + ".letter_maker_block");
+		setUnlocalizedName(Reference.MOD_ID + ".letter_maker_block");
 		setRegistryName("letter_maker_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
 	}
@@ -54,7 +54,7 @@ public class BlockLetterMaker extends Block implements ITileEntityProvider {
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
-			player.openGui(FirstMod.instance, GuiHandler.LETTERMAKER, world, pos.getX(), pos.getY(), pos.getZ());
+			player.openGui(FirstMod.instance, GuiHandler.LETTER_MAKER, world, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}

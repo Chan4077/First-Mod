@@ -14,18 +14,11 @@ public class GuiLetterMaker extends GuiContainer {
 	public static final int WIDTH = 176;
 	public static final int HEIGHT = 180;
 	private InventoryPlayer playerInv;
-	private static final ResourceLocation background = new ResourceLocation(Reference.MODID, "textures/gui/lettermakercontainer.png");
+	private static final ResourceLocation background = new ResourceLocation(Reference.MOD_ID, "textures/gui/lettermakercontainer.png");
 
 	public GuiLetterMaker(Container container, InventoryPlayer playerInv) {
 		super(container);
 		this.playerInv = playerInv;
-	}
-
-	@Override
-	public void initGui() {
-		super.initGui();
-
-		this.buttonList.add(new GuiButton(1, 75, 150, 50, 20, "Hello"));
 	}
 
 	@Override
@@ -41,13 +34,20 @@ public class GuiLetterMaker extends GuiContainer {
 		mc.getTextureManager().bindTexture(background);
 		int x = (width - xSize) / 2;
 		int y = (height - ySize) / 2;
-		drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
+		System.out.println("X: " + x);
+		System.out.println("Y: " + y);
+		System.out.println("xSize: " + xSize);
+		System.out.println("ySize: " + ySize);
+		System.out.println("Width: " + width);
+		System.out.println("Height: " + height);
+		drawTexturedModalRect(x, y, 0, 0, WIDTH, HEIGHT);
 	}
+
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		String name = I18n.format(ModBlocks.blockLetterMaker.getUnlocalizedName() + ".name");
-		fontRenderer.drawString(name, xSize / 2 - fontRenderer.getStringWidth(name) / 2, 6, 0x404040);
-		fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, ySize - 94, 0x404040);
+		fontRenderer.drawString(name, WIDTH / 2 - fontRenderer.getStringWidth(name) / 2, 6, 0x404040);
+		fontRenderer.drawString(playerInv.getDisplayName().getUnformattedText(), 8, HEIGHT - 94, 0x404040);
 	}
 
 	@Override

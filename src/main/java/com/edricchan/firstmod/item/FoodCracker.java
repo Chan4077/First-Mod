@@ -23,12 +23,12 @@ public class FoodCracker extends ItemFood {
 	public FoodCracker() {
 		super(10, 3, true);
 		setRegistryName("food_cracker");
-		setUnlocalizedName(Reference.MODID+".food_cracker");
+		setUnlocalizedName(Reference.MOD_ID + ".food_cracker");
 		setCreativeTab(CreativeTabHandler.tabFoods);
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("A yummy cracker! What else do you expect?");
 		if (GuiScreen.isShiftKeyDown()) {
 			tooltip.add("§9Food: Replenishes hunger by 10 shanks§r");
@@ -38,8 +38,9 @@ public class FoodCracker extends ItemFood {
 			tooltip.add("§9Press [SHIFT] for more info§r");
 		}
 	}
+
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
-		 ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
 	}
 }

@@ -15,6 +15,7 @@ public class ModItems {
 	public static FoodCracker foodCracker;
 	@GameRegistry.ObjectHolder("first:item_ruby")
 	public static ItemRuby itemRuby;
+
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
 		foodCheese.initModel();

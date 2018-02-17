@@ -23,12 +23,12 @@ public class FoodCheeseCookie extends ItemFood {
 	public FoodCheeseCookie() {
 		super(12, 4, true);
 		setRegistryName("food_cheese_cookie");
-		setUnlocalizedName(Reference.MODID + ".food_cheese_cookie");
+		setUnlocalizedName(Reference.MOD_ID + ".food_cheese_cookie");
 		setCreativeTab(CreativeTabHandler.tabFoods);
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("Cheese added to a cookie = Amazing!");
 		if (GuiScreen.isShiftKeyDown()) {
 			tooltip.add("§9Food: Replenishes hunger by 12 shanks§r");
@@ -38,8 +38,9 @@ public class FoodCheeseCookie extends ItemFood {
 			tooltip.add("§9Press [SHIFT] for more info§r");
 		}
 	}
+
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
-		 ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
 	}
 }

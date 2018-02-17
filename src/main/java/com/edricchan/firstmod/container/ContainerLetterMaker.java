@@ -16,7 +16,7 @@ public class ContainerLetterMaker extends Container {
 
 	public ContainerLetterMaker(InventoryPlayer playerInv, final TileEntityLetterMaker letterMaker) {
 		IItemHandler inventory = letterMaker.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-		addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35) {
+		addSlotToContainer(new SlotItemHandler(inventory, 0, 57, 32) {
 			@Override
 			public void onSlotChanged() {
 				letterMaker.markDirty();
@@ -25,12 +25,12 @@ public class ContainerLetterMaker extends Container {
 
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {
-				addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+				addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 98 + i * 18));
 			}
 		}
 
 		for (int k = 0; k < 9; k++) {
-			addSlotToContainer(new Slot(playerInv, k, 8 + k * 18, 142));
+			addSlotToContainer(new Slot(playerInv, k, 8 + k * 18, 156));
 		}
 	}
 

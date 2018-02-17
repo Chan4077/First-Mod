@@ -13,6 +13,7 @@ public class ModBlocks {
 
 	@GameRegistry.ObjectHolder("first:letter_maker_block")
 	public static BlockLetterMaker blockLetterMaker;
+
 	/**
 	 * Initializes all item models
 	 */

@@ -19,15 +19,16 @@ import java.util.List;
 public class BlockSimple extends Block {
 	public BlockSimple() {
 		super(Material.CLAY);
-		setUnlocalizedName(Reference.MODID + ".simple_block");
+		setUnlocalizedName(Reference.MOD_ID + ".simple_block");
 		setRegistryName("simple_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("The most basic block in the world.");
 	}
+
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));

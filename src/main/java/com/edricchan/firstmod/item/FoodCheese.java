@@ -23,13 +23,13 @@ public class FoodCheese extends ItemFood {
 	public FoodCheese() {
 		super(8, 2, true);
 		setRegistryName("food_cheese");
-		setUnlocalizedName(Reference.MODID + ".food_cheese");
+		setUnlocalizedName(Reference.MOD_ID + ".food_cheese");
 		setCreativeTab(CreativeTabHandler.tabFoods);
 
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("Delicious cheese by itself!");
 		tooltip.add("§lBut who earth would eat this by itself?§r");
 		if (GuiScreen.isShiftKeyDown()) {
@@ -40,8 +40,9 @@ public class FoodCheese extends ItemFood {
 			tooltip.add("§9Press [SHIFT] for more info§r");
 		}
 	}
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
-    }
+
+	@SideOnly(Side.CLIENT)
+	public void initModel() {
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+	}
 }

@@ -19,12 +19,12 @@ import java.util.List;
 public class ItemRuby extends Item {
 	public ItemRuby() {
 		setRegistryName("item_ruby");
-		setUnlocalizedName(Reference.MODID+".item_ruby");
+		setUnlocalizedName(Reference.MOD_ID + ".item_ruby");
 		setCreativeTab(CreativeTabHandler.tabItems);
 	}
+
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-	{
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("A ruby! Amazing!");
 		if (GuiScreen.isCtrlKeyDown()) {
 			tooltip.add("§6Did you know that this item exists in the minecraft textures?§r");
@@ -33,6 +33,7 @@ public class ItemRuby extends Item {
 			tooltip.add("§6Press [CTRL/COMMAND] for some facts!§r");
 		}
 	}
+
 	@SideOnly(Side.CLIENT)
 	public void initModel() {
 		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
