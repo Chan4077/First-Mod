@@ -1,4 +1,4 @@
-import { SharedInjectable } from '../shared';
+import { SharedService } from '../shared.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ScreenshotsComponent {
 
-	constructor(private shared: SharedInjectable) {shared.title = "Mod Screenshots";}
+	constructor(private shared: SharedService) { shared.title = 'Mod Screenshots'; }
 
 }

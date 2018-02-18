@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Injectable, Component, OnInit, ViewChild, DoCheck, NgModule } from '@angular/core';
 import { MatSnackBarConfig, MatSnackBar, MatSnackBarRef, SimpleSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialog, MatDialogRef, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
-import { MatCommonModule } from '@angular/material/core';
+import { ThemePalette } from '@angular/material/core';
 import { MatSelectionList, MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,41 +15,46 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Injectable()
-export class SharedInjectable {
-	private _title: string = "";
-	constructor(private snackBar: MatSnackBar, private dialog: MatDialog, private documentTitle: Title, private breakpointObserver: BreakpointObserver) { }
+export class SharedService {
+	private _title: string = ''
+	constructor(
+		private snackBar: MatSnackBar,
+		private dialog: MatDialog,
+		private documentTitle: Title,
+		private breakpointObserver: BreakpointObserver
+	) { }
 	private releases: Release[] = [
 		{
-			mcVer: "1.12, 1.12.1, 1.12.2",
+			mcVer: '1.12, 1.12.1, 1.12.2',
 			versions: [
 				{
-					downloadLink: "",
-					version: "v4.x (Not available yet)",
+					downloadLink: '',
+					version: 'v2.x (Not available yet)',
 					notAvailable: true
 				}
 			]
 		},
 		{
-			mcVer: "1.11.2",
+			mcVer: '1.11.2',
 			versions: [
 				{
-					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.2.1/First_Mod-1.11.2-1.2.1.jar",
-					version: "v1.2.1",
+					downloadLink: 'https://github.com/Chan4077/First-Mod/releases/download/v1.2.1/First_Mod-1.11.2-1.2.1.jar',
+					version: 'v1.2.1',
 					deprecated: true
 				},
 				{
-					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.2/First_Mod-1.11.2-1.2.jar",
-					version: "v1.2",
+					downloadLink: 'https://github.com/Chan4077/First-Mod/releases/download/v1.2/First_Mod-1.11.2-1.2.jar',
+					version: 'v1.2',
 					deprecated: true
 				}
 			]
 		},
 		{
-			mcVer: "1.10.2",
+			mcVer: '1.10.2',
 			versions: [
 				{
-					downloadLink: "https://github.com/Chan4077/First-Mod/releases/download/v1.1/First_Mod-1.10.2-1.1.jar",
-					version: "v1.1",
+					downloadLink: 'https://github.com/Chan4077/First-Mod/releases/download/v1.1/First_Mod-1.10.2-1.1.jar',
+					version: 'v1.1',
 					unsupported: true
 				}
 			]
@@ -59,7 +64,7 @@ export class SharedInjectable {
 	 * Gets all releases
 	 * @returns {Release[]}
 	 */
-	public getReleases(): Release[]{
+	public getReleases(): Release[] {
 		return this.releases;
 	}
 	/**
@@ -68,8 +73,8 @@ export class SharedInjectable {
 	 */
 	public getSupportedReleases(): Release[] {
 		let supportedReleases: Release[] = [];
-		for(var i=0;i<this.releases.length;i++) {
-			for (var j=0;j<this.releases[i].versions.length;j++) {
+		for (let i = 0; i < this.releases.length; i++) {
+			for (let j = 0; j < this.releases[i].versions.length; j++) {
 				// Checks if the version is un-unsupported (i.e. supported)
 				if (!this.releases[i].versions[j].unsupported) {
 					// Checks if the version is not deprecated
@@ -144,7 +149,7 @@ export class SharedInjectable {
 				return snackBarRef;
 			}
 		} else {
-			this.throwError("opts", "SnackBarConfig");
+			this.throwError('opts', 'SnackBarConfig');
 		}
 	}
 	/**
@@ -161,10 +166,10 @@ export class SharedInjectable {
 					return this.snackBar.openFromComponent(opts.component);
 				}
 			} else {
-				this.throwError("opts.additionalOpts", "MatSnackBarConfig");
+				this.throwError('opts.additionalOpts', 'MatSnackBarConfig');
 			}
 		} else {
-			this.throwError("opts", "SnackBarConfig");
+			this.throwError('opts', 'SnackBarConfig');
 		}
 	}
 	/**
@@ -184,7 +189,7 @@ export class SharedInjectable {
 			dialogRef.componentInstance.alertConfig = opts;
 			return dialogRef;
 		} else {
-			this.throwError("opts", "AlertDialogConfig");
+			this.throwError('opts', 'AlertDialogConfig');
 		}
 	}
 	/**
@@ -198,7 +203,7 @@ export class SharedInjectable {
 			dialogRef.componentInstance.confirmConfig = opts;
 			return dialogRef;
 		} else {
-			this.throwError("opts", "ConfirmDialogConfig");
+			this.throwError('opts', 'ConfirmDialogConfig');
 		}
 	}
 	/**
@@ -212,7 +217,7 @@ export class SharedInjectable {
 			dialogRef.componentInstance.promptConfig = opts;
 			return dialogRef;
 		} else {
-			this.throwError("opts", "PromptDialogConfig");
+			this.throwError('opts', 'PromptDialogConfig');
 		}
 	}
 	/**
@@ -222,11 +227,11 @@ export class SharedInjectable {
 	 */
 	public openSelectionDialog(opts: SelectionDialogConfig): MatDialogRef<SelectionDialog> {
 		if (opts) {
-			let dialogRef = this.dialog.open(SelectionDialog, { disableClose: true, panelClass: "selection-dialog" });
+			let dialogRef = this.dialog.open(SelectionDialog, { disableClose: true, panelClass: 'selection-dialog' });
 			dialogRef.componentInstance.selectionConfig = opts;
 			return dialogRef;
 		} else {
-			this.throwError("opts", "SelectionDialogConfig");
+			this.throwError('opts', 'SelectionDialogConfig');
 		}
 	}
 	/**
@@ -296,10 +301,10 @@ export class ConfirmDialog implements OnInit {
 	}
 	confirmConfig: ConfirmDialogConfig;
 	cancel() {
-		this.dialogRef.close("cancel");
+		this.dialogRef.close('cancel');
 	}
 	ok() {
-		this.dialogRef.close("ok");
+		this.dialogRef.close('ok');
 	}
 	ngOnInit() {
 		if (this.confirmConfig.disableClose) {
@@ -317,7 +322,7 @@ export class PromptDialog implements OnInit {
 	promptConfig: PromptDialogConfig;
 	input: string | number;
 	cancel() {
-		this.dialogRef.close("cancel");
+		this.dialogRef.close('cancel');
 	}
 	ok() {
 		this.dialogRef.close(this.input);
@@ -346,7 +351,7 @@ export class SelectionDialog implements OnInit, DoCheck {
 		}
 	}
 	cancel() {
-		this.dialogRef.close("cancel");
+		this.dialogRef.close('cancel');
 	}
 	ok() {
 		this.dialogRef.close(this.selection.selectedOptions.selected);
@@ -399,6 +404,10 @@ export interface AlertDialogConfig extends DialogConfig {
 	 * @type {string}
 	 */
 	ok?: string;
+	/**
+	 * The color of the ok button
+	 */
+	okColor?: ThemePalette;
 }
 
 export interface ConfirmDialogConfig extends DialogConfig {
@@ -434,7 +443,7 @@ export interface PromptDialogConfig extends DialogConfig {
 	 * The input type
 	 * @type {"text"|"email"|"password"|"number"}
 	 */
-	inputType?: "text" | "email" | "password" | "number";
+	inputType?: 'text' | 'email' | 'password' | 'number';
 	/**
 	 * The initial value of the input
 	 * @type {string|number}
@@ -442,9 +451,9 @@ export interface PromptDialogConfig extends DialogConfig {
 	value?: string | number;
 	/**
 	 * The color of the input
-	 * @type {"primary"|"accent"|"warn"}
+	 * @type {ThemePalette}
 	 */
-	color?: "primary" | "accent" | "warn";
+	inputColor?: ThemePalette;
 }
 export interface SelectionDialogConfig extends DialogConfig {
 	/**
@@ -483,7 +492,7 @@ export interface SelectionDialogOptions {
 	 * The checkbox position of the selection list item
 	 * @type {"before"|"after"}
 	 */
-	checkboxPosition?: "before" | "after";
+	checkboxPosition?: 'before' | 'after';
 	/**
 	 * Whether the selection list item is initially selected
 	 * @type {boolean}
@@ -512,7 +521,6 @@ export const SHARED_DIALOGS = [
 	imports: [
 		CommonModule,
 		BrowserAnimationsModule,
-		MatCommonModule,
 		MatButtonModule,
 		MatDialogModule,
 		MatFormFieldModule,
@@ -526,7 +534,7 @@ export const SHARED_DIALOGS = [
 		SHARED_DIALOGS
 	],
 	providers: [
-		SharedInjectable
+		SharedService
 	],
 	declarations: [
 		SHARED_DIALOGS
@@ -535,4 +543,4 @@ export const SHARED_DIALOGS = [
 		SHARED_DIALOGS
 	]
 })
-export class SharedModule {}
+export class SharedModule { }

@@ -1,17 +1,10 @@
 <h1>Downloads</h1>
 <mat-nav-list>
-		<h3 matSubheader>1.11.2</h3>
-		<a mat-list-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.2.1/First_Mod-1.11.2-1.2.1.jar" download>
+	<div *ngFor="let release of releases">
+		<h3 matSubheader>{{release.mcVer}}</h3>
+		<a mat-list-item [href]="version.downloadLink" download *ngFor="let version of release.versions">
 			<mat-icon matListIcon>file_download</mat-icon>
-			<span matLine>v1.2.1 (<strong>latest</strong>)</span>
+			<h3 matLine>{{version.version}}</h3>
 		</a>
-		<a mat-list-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.2/First_Mod-1.11.2-1.2.jar" download>
-			<mat-icon matListIcon>file_download</mat-icon>
-			<span matLine>v1.2</span>
-		</a>
-		<h3 matSubheader>1.10.2</h3>
-		<a mat-list-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.1/First_Mod-1.10.2-1.1.jar" download>
-			<mat-icon matListIcon>file_download</mat-icon>
-			<span matLine>v1.1 (<strong>unsupported</strong>)</span>
-		</a>
+	</div>
 </mat-nav-list>

@@ -1,5 +1,5 @@
 <mat-nav-list>
-	<a mat-list-item *ngFor="let guide of guides" [routerLink]="['/guides/'+guide.link]">
-		<p matLine>{{guide.title}}</p>
+	<a mat-list-item *ngFor="let guide of guides" [routerLink]="['/'+guide.url]">
+		<p matLine>{{guide.name}}</p>
 	</a>
 </mat-nav-list>

@@ -1,3 +1,5 @@
+import { CommunityComponent } from './docs/community/community.component';
+import { DocsItems } from './docs/docs-items';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRouting } from './app.routing';
@@ -7,15 +9,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-//#region Shared provider + templates
-import {
-	Shared,
-	AlertDialog,
-	ConfirmDialog,
-	PromptDialog,
-	SelectionDialog
-} from './shared';
+//#region Shared module
+import { SharedModule } from './shared.service';
 //#endregion
+
 //#region Material module imports
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -48,14 +45,6 @@ import { DownloadsComponent } from './downloads/downloads.component';
 import { HighlightCodeDirective } from './highlight-code.directive';
 import { CodeViewerComponent } from './code-viewer/code-viewer.component';
 //#endregion
-//#region Shared components
-const SHARED_DIALOGS = [
-	AlertDialog,
-	ConfirmDialog,
-	PromptDialog,
-	SelectionDialog
-];
-//#endregion
 
 //#region Material modules
 const MATERIAL_MODULES = [
@@ -86,9 +75,9 @@ const CDK_MODULES = [
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		SHARED_DIALOGS,
 		GettingStartedComponent,
 		BuildingComponent,
+		CommunityComponent,
 		GuideHomeComponent,
 		DownloadsComponent,
 		HighlightCodeDirective,
@@ -102,16 +91,14 @@ const CDK_MODULES = [
 		FlexLayoutModule,
 		MATERIAL_MODULES,
 		CDK_MODULES,
+		SharedModule,
 		AppRouting
 	],
 	providers: [
-		Shared
+		DocsItems
 	],
 	bootstrap: [
 		AppComponent
-	],
-	entryComponents: [
-		SHARED_DIALOGS
 	]
 })
 export class AppModule { }

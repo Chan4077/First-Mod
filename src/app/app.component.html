@@ -1,8 +1,9 @@
 <mat-sidenav-container fullscreen cdkTrapFocus>
 	<mat-sidenav #left class="app-sidenav mat-elevation-z3" [mode]="isMobile ? 'over' : 'side'">
 		<mat-toolbar>
+			Links
 			<span fxFlex></span>
-			<button mat-icon-button (click)="left.close()" matTooltip="Close sidenav" matTooltipPosition="left">
+			<button mat-icon-button (click)="left.close()" matTooltip="Close sidenav" matTooltipPosition="right">
 				<mat-icon>keyboard_arrow_left</mat-icon>
 			</button>
 		</mat-toolbar>
@@ -25,22 +26,23 @@
 				<mat-icon>keyboard_arrow_down</mat-icon>
 			</button>
 			<mat-menu #downloadsMenu="matMenu" [overlapTrigger]="false">
-				<h3 class="menu-h3 mat-subheader">1.11.2</h3>
-				<a mat-menu-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.2.1/First_Mod-1.11.2-1.2.1.jar" download>
-					<mat-icon>file_download</mat-icon>
-					<span>v1.2.1 (<strong>latest</strong>)</span>
-				</a>
-				<a mat-menu-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.2/First_Mod-1.11.2-1.2.jar" download>
-					<mat-icon>file_download</mat-icon>
-					<span>v1.2</span>
-				</a>
-				<h3 class="menu-h3 mat-subheader">1.10.2</h3>
-				<a mat-menu-item href="https://github.com/Chan4077/First-Mod/releases/download/v1.1/First_Mod-1.10.2-1.1.jar" download>
-					<mat-icon>file_download</mat-icon>
-					<span>v1.1 (<strong>unsupported</strong>)</span>
-				</a>
+				<mat-nav-list>
+					<div *ngFor="let release of releases">
+						<h3 matSubheader>{{release.mcVer}}</h3>
+						<a mat-menu-item *ngFor="let version of release.versions" [href]="version.downloadLink" download [disabled]="version.notAvailable">
+							<mat-icon>file_download</mat-icon>{{version.version}}</a>
+					</div>
+					<mat-divider></mat-divider>
+					<a mat-menu-item routerLink="/downloads">
+						<mat-icon>file_download</mat-icon>
+						Other downloads
+					</a>
+				</mat-nav-list>
 			</mat-menu>
 		</mat-toolbar>
+		<div class="page-title">
+			<h1>{{getTitle()}}</h1>
+		</div>
 		<div class="app-content">
 			<router-outlet></router-outlet>
 		</div>

@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { SharedService, Release } from '../shared.service';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-downloads',
 	templateUrl: './downloads.component.html'
 })
-export class DownloadsComponent implements OnInit {
+export class DownloadsComponent {
 
-	constructor() { }
-
-	ngOnInit() {
+	constructor(private shared: SharedService) {
+		this.releases = shared.getReleases();
+		shared.title = 'Downloads';
 	}
-
+	releases: Release[];
 }
