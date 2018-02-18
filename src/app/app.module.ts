@@ -1,3 +1,4 @@
+import { ScreenshotsComponent } from './screenshots/screenshots.component';
 import { CommunityComponent } from './docs/community/community.component';
 import { DocsItems } from './docs/docs-items';
 import { FormsModule } from '@angular/forms';
@@ -71,13 +72,19 @@ const CDK_MODULES = [
 	LayoutModule
 ];
 //#endregion
+
+const GUIDES = [
+	GettingStartedComponent,
+	BuildingComponent,
+	CommunityComponent,
+	ScreenshotsComponent
+];
+
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		GettingStartedComponent,
-		BuildingComponent,
-		CommunityComponent,
+		GUIDES,
 		GuideHomeComponent,
 		DownloadsComponent,
 		HighlightCodeDirective,
