@@ -1,6 +1,6 @@
 import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs/Observable';
-import { Injectable, Component, OnInit, ViewChild, DoCheck, NgModule } from '@angular/core';
+import { Injectable, Component, OnInit, ViewChild, NgModule } from '@angular/core';
 import { MatSnackBarConfig, MatSnackBar, MatSnackBarRef, SimpleSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialog, MatDialogRef, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { ThemePalette } from '@angular/material/core';
@@ -276,11 +276,21 @@ export class SharedService {
 
 @Component({
 	selector: 'alert-dialog',
-	templateUrl: './partials/alertdialog.shared.html'
+	template: `
+	<h2 matDialogTitle>{{alertConfig.title ? alertConfig.title : 'Alert'}}</h2>
+	<mat-dialog-content fxLayout="column" class="mat-typography">
+		<p class="mat-body" *ngIf="!alertConfig.isHtml">{{alertConfig.msg}}</p>
+		<span *ngIf="alertConfig.isHtml" [innerHTML]="alertConfig.msg"></span>
+	</mat-dialog-content>
+	<mat-dialog-actions align="end">
+		<button mat-button [color]="okColor" (click)="close()">{{alertConfig.ok ? alertConfig.ok : 'Dismiss'}}</button>
+	</mat-dialog-actions>
+	`
 })
 export class AlertDialog implements OnInit {
 	constructor(private dialogRef: MatDialogRef<AlertDialog>) {
 	}
+	okColor: ThemePalette = 'primary';
 	alertConfig: AlertDialogConfig;
 	close() {
 		this.dialogRef.close();
@@ -289,16 +299,31 @@ export class AlertDialog implements OnInit {
 		if (this.alertConfig.disableClose) {
 			this.dialogRef.disableClose = true;
 		}
+		if (this.alertConfig.themeColor) {
+			this.okColor = this.alertConfig.themeColor;
+		} else if (this.alertConfig.okColor) {
+			this.okColor = this.alertConfig.okColor;
+		}
 	}
 }
 @Component({
 	selector: 'confirm-dialog',
-	templateUrl: './partials/confirmdialog.shared.html'
+	template: `
+	<h2 matDialogTitle>{{confirmConfig.title ? confirmConfig.title : 'Confirm'}}</h2>
+	<mat-dialog-content fxLayout="column" class="mat-typography">
+		<p class="mat-body" *ngIf="!confirmConfig.isHtml">{{confirmConfig.msg}}</p>
+		<span *ngIf="confirmConfig.isHtml" [innerHTML]="confirmConfig.msg"></span>
+	</mat-dialog-content>
+	<mat-dialog-actions align="end">
+		<button mat-button (click)="cancel()" [color]="cancelColor">{{confirmConfig.cancel ? confirmConfig.cancel : 'Cancel'}}</button>
+		<button mat-button (click)="ok()" [color]="okColor">{{confirmConfig.ok ? confirmConfig.ok : 'OK'}}</button>
+	</mat-dialog-actions>
+	`
 })
 export class ConfirmDialog implements OnInit {
-	constructor(private dialogRef: MatDialogRef<ConfirmDialog>) {
-
-	}
+	constructor(private dialogRef: MatDialogRef<ConfirmDialog>) { }
+	okColor: ThemePalette = 'primary';
+	cancelColor: ThemePalette = 'primary';
 	confirmConfig: ConfirmDialogConfig;
 	cancel() {
 		this.dialogRef.close('cancel');
@@ -310,16 +335,46 @@ export class ConfirmDialog implements OnInit {
 		if (this.confirmConfig.disableClose) {
 			this.dialogRef.disableClose = true;
 		}
+		if (this.confirmConfig.themeColor) {
+			this.okColor = this.confirmConfig.themeColor;
+			this.cancelColor = this.confirmConfig.themeColor;
+		} else {
+			if (this.confirmConfig.okColor) {
+				this.okColor = this.confirmConfig.okColor;
+			}
+			if (this.confirmConfig.cancelColor) {
+				this.cancelColor = this.confirmConfig.cancelColor;
+			}
+		}
 	}
 }
 @Component({
 	selector: 'prompt-dialog',
-	templateUrl: './partials/promptdialog.shared.html'
+	template: `
+	<h2 matDialogTitle>{{promptConfig.title ? promptConfig.title : 'Prompt'}}</h2>
+	<mat-dialog-content fxLayout="column" class="mat-typography">
+		<p class="mat-body" *ngIf="!promptConfig.isHtml">{{promptConfig.msg}}</p>
+		<span *ngIf="promptConfig.isHtml" [innerHTML]="promptConfig.msg"></span>
+		<form #form="ngForm">
+			<mat-form-field [color]="inputColor" style="width:100%">
+				<input matInput [(ngModel)]="input" [placeholder]="promptConfig.placeholder" [type]="promptConfig.inputType" required name="input">
+				<mat-error>This is required.</mat-error>
+			</mat-form-field>
+		</form>
+	</mat-dialog-content>
+	<mat-dialog-actions align="end">
+		<button mat-button (click)="cancel()" [color]="cancelColor">{{promptConfig.cancel ? promptConfig.cancel : 'Cancel'}}</button>
+		<button mat-button (click)="ok()" [color]="okColor" [disabled]="form.invalid">{{promptConfig.ok ? promptConfig.ok : 'OK'}}</button>
+	</mat-dialog-actions>
+	`
 })
 export class PromptDialog implements OnInit {
 	constructor(private dialogRef: MatDialogRef<PromptDialog>) {
 	}
 	promptConfig: PromptDialogConfig;
+	cancelColor: ThemePalette = 'primary';
+	okColor: ThemePalette = 'primary';
+	inputColor: ThemePalette = 'primary';
 	input: string | number;
 	cancel() {
 		this.dialogRef.close('cancel');
@@ -334,18 +389,64 @@ export class PromptDialog implements OnInit {
 		if (this.promptConfig.disableClose) {
 			this.dialogRef.disableClose = true;
 		}
+		if (this.promptConfig.themeColor) {
+			this.cancelColor = this.promptConfig.themeColor;
+			this.okColor = this.promptConfig.themeColor;
+			this.inputColor = this.promptConfig.themeColor;
+		} else {
+			if (this.promptConfig.okColor) {
+				this.okColor = this.promptConfig.okColor;
+			}
+			if (this.promptConfig.cancelColor) {
+				this.cancelColor = this.promptConfig.cancelColor;
+			}
+			if (this.promptConfig.inputColor) {
+				this.inputColor = this.promptConfig.inputColor;
+			}
+		}
 	}
 }
 @Component({
 	selector: 'selection-dialog',
-	templateUrl: './partials/selectiondialog.shared.html'
+	template: `
+	<h2 matDialogTitle>{{selectionConfig.title ? selectionConfig.title : 'Select options from the list'}}</h2>
+	<mat-dialog-content fxLayout="column" class="mat-typography">
+		<mat-selection-list #selection>
+			<mat-list-option *ngFor="let option of selectionConfig.options" [disabled]="option.disabled" [value]="option.value" [checkboxPosition]="option.checkboxPosition ? option.checkboxPosition : 'before'" [selected]="option.selected">
+				{{option.content}}
+			</mat-list-option>
+		</mat-selection-list>
+	</mat-dialog-content>
+	<mat-dialog-actions align="end">
+		<button mat-button [color]="cancelColor" (click)="cancel()">{{selectionConfig.cancel ? selectionConfig.cancel : 'Cancel'}}</button>
+		<button mat-button [color]="okColor" (click)="ok()" [disabled]="_checkValid()">{{selectionConfig.ok ? selectionConfig.ok : 'OK'}}</button>
+	</mat-dialog-actions>
+	`
 })
-export class SelectionDialog implements OnInit, DoCheck {
+export class SelectionDialog implements OnInit {
 	@ViewChild('selection') selection: MatSelectionList;
-	constructor(private dialogRef: MatDialogRef<SelectionDialog>) {
-	}
+	constructor(private dialogRef: MatDialogRef<SelectionDialog>) { }
+	cancelColor: ThemePalette = 'primary';
+	okColor: ThemePalette = 'primary';
 	selectionConfig: SelectionDialogConfig;
+	private _checkValid(): boolean {
+		if (this.selection.selectedOptions.selected.length < 1) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 	ngOnInit() {
+		if (this.selectionConfig.themeColor) {
+			this.cancelColor = this.okColor = this.selectionConfig.themeColor;
+		} else {
+			if (this.selectionConfig.okColor) {
+				this.okColor = this.selectionConfig.okColor;
+			}
+			if (this.selectionConfig.cancelColor) {
+				this.cancelColor = this.selectionConfig.cancelColor;
+			}
+		}
 		if (this.selectionConfig.disableClose) {
 			this.dialogRef.disableClose = true;
 		}
@@ -355,8 +456,6 @@ export class SelectionDialog implements OnInit, DoCheck {
 	}
 	ok() {
 		this.dialogRef.close(this.selection.selectedOptions.selected);
-	}
-	ngDoCheck() {
 	}
 }
 export interface SnackBarConfig {
@@ -397,6 +496,11 @@ export interface DialogConfig extends MatDialogConfig {
 	 * @type {boolean}
 	 */
 	isHtml?: boolean;
+	/**
+	 * The theme of the dialog
+	 * @type {ThemePalette}
+	 */
+	themeColor?: ThemePalette;
 }
 export interface AlertDialogConfig extends DialogConfig {
 	/**
@@ -417,10 +521,19 @@ export interface ConfirmDialogConfig extends DialogConfig {
 	 */
 	ok?: string;
 	/**
+	 * The color of the cancel button
+	 * @type {ThemePalette}
+	 */
+	okColor?: ThemePalette;
+	/**
 	 * The cancel button text
 	 * @type {string}
 	 */
 	cancel?: string;
+	/**
+	 * The color of the cancel button
+	 */
+	cancelColor?: ThemePalette;
 }
 
 export interface PromptDialogConfig extends DialogConfig {
@@ -430,20 +543,30 @@ export interface PromptDialogConfig extends DialogConfig {
 	 */
 	ok?: string;
 	/**
+	 * The color of the ok button
+	 * @type {ThemePalette}
+	 */
+	okColor?: ThemePalette;
+	/**
 	 * The cancel button text
 	 * @type {string}
 	 */
 	cancel?: string;
 	/**
+	 * The color of the cancel button
+	 * @type {ThemePalette}
+	 */
+	cancelColor?: ThemePalette;
+	/**
 	 * The placeholder of the input
 	 * @type {string}
 	 */
-	placeholder: string;
+	placeholder?: string;
 	/**
 	 * The input type
 	 * @type {"text"|"email"|"password"|"number"}
 	 */
-	inputType?: 'text' | 'email' | 'password' | 'number';
+	inputType: 'text' | 'email' | 'password' | 'number';
 	/**
 	 * The initial value of the input
 	 * @type {string|number}
@@ -462,10 +585,20 @@ export interface SelectionDialogConfig extends DialogConfig {
 	 */
 	ok?: string;
 	/**
+	 * The color of the ok button
+	 * @type {ThemePalette}
+	 */
+	okColor?: ThemePalette;
+	/**
 	 * The cancel button text
 	 * @type {string}
 	 */
 	cancel?: string;
+	/**
+	 * The color of the cancel button
+	 * @type {ThemePalette}
+	 */
+	cancelColor?: ThemePalette;
 	/**
 	 * The options for the selection dialog
 	 * @type {SelectionDialogOptions[]}
