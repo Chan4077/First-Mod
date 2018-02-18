@@ -12,7 +12,7 @@
 		"@angular/common": "^5.2.5",
 		"@angular/compiler": "^5.2.5",
 		"@angular/core": "^5.2.5",
-		"@angular/flex-layout": "github:angular/flex-layout-builds",
+		"@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
 		"@angular/forms": "^5.2.5",
 		"@angular/http": "^5.2.5",
 		"@angular/material": "git+https://github.com/angular/material2-builds.git",
@@ -27,7 +27,7 @@
 		"zone.js": "^0.8.20"
 	},
 	"devDependencies": {
-		"@angular/cli": "1.4.4",
+		"@angular/cli": "^1.7.0",
 		"@angular/compiler-cli": "^5.2.5",
 		"@angular/language-service": "^4.2.4",
 		"@types/highlight.js": "^9.12.2",
