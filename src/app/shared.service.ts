@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Injectable()
 export class SharedService {
-	private _title: string = ''
+	private _title: string = '';
 	constructor(
 		private snackBar: MatSnackBar,
 		private dialog: MatDialog,
@@ -429,7 +429,11 @@ export class SelectionDialog implements OnInit {
 	cancelColor: ThemePalette = 'primary';
 	okColor: ThemePalette = 'primary';
 	selectionConfig: SelectionDialogConfig;
-	private _checkValid(): boolean {
+	/**
+	 * Not meant for public use
+	 * @private
+	 */
+	_checkValid(): boolean {
 		if (this.selection.selectedOptions.selected.length < 1) {
 			return false;
 		} else {
