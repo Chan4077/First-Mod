@@ -1,3 +1,4 @@
+import { ScreenshotsComponent } from './screenshots/screenshots.component';
 import { CommunityComponent } from './docs/community/community.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { GuideHomeComponent } from './docs/guide-home/guide-home.component';
@@ -10,7 +11,8 @@ import { Routes, RouterModule } from '@angular/router';
 const GUIDE_ROUTES: Routes = [
 	{ path: 'getting-started', component: GettingStartedComponent },
 	{ path: 'building', component: BuildingComponent },
-	{ path: 'community', component: CommunityComponent }
+	{ path: 'community', component: CommunityComponent },
+	{ path: 'screenshots', component: ScreenshotsComponent }
 ];
 const APP_ROUTES: Routes = [
 	{ path: 'home', component: HomeComponent },

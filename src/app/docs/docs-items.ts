@@ -2,19 +2,24 @@ import { Injectable } from '@angular/core';
 
 const GUIDE_ITEMS: DocItem[] = [
 	{
-		name: "Building the Source Code",
-		id: "building",
-		url: "guides/building"
+		name: 'Building the Source Code',
+		id: 'building',
+		url: 'guides/building'
 	},
 	{
-		name: "Getting Started",
-		id: "getting-started",
-		url: "guides/getting-started"
+		name: 'Getting Started',
+		id: 'getting-started',
+		url: 'guides/getting-started'
 	},
 	{
-		name: "Community",
-		id: "community",
-		url: "guides/community"
+		name: 'Community',
+		id: 'community',
+		url: 'guides/community'
+	},
+	{
+		name: 'Mod Screenshots',
+		id: 'screenshots',
+		url: 'guides/screenshots'
 	}
 ];
 
