@@ -1,7 +1,9 @@
 package com.edricchan.firstmod.handler;
 
-import com.edricchan.firstmod.item.*;
-
+import com.edricchan.firstmod.item.FoodCheese;
+import com.edricchan.firstmod.item.FoodCheeseCookie;
+import com.edricchan.firstmod.item.FoodCracker;
+import com.edricchan.firstmod.item.ItemRuby;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

@@ -5,8 +5,10 @@ import com.edricchan.firstmod.block.BlockLetterMaker;
 import com.edricchan.firstmod.block.BlockSimple;
 import com.edricchan.firstmod.handler.GuiHandler;
 import com.edricchan.firstmod.handler.ModBlocks;
-import com.edricchan.firstmod.item.*;
-
+import com.edricchan.firstmod.item.FoodCheese;
+import com.edricchan.firstmod.item.FoodCheeseCookie;
+import com.edricchan.firstmod.item.FoodCracker;
+import com.edricchan.firstmod.item.ItemRuby;
 import com.edricchan.firstmod.network.PacketRequestUpdateLetterMaker;
 import com.edricchan.firstmod.network.PacketUpdateLetterMaker;
 import com.edricchan.firstmod.tileentity.TileEntityLetterMaker;
@@ -28,6 +30,11 @@ import static com.edricchan.firstmod.FirstMod.network;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
+	/**
+	 * The pre init hook
+	 *
+	 * @param e The pre initialization event
+	 */
 	public void preInit(FMLPreInitializationEvent e) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		network = NetworkRegistry.INSTANCE.newSimpleChannel("first");
@@ -35,14 +42,24 @@ public class CommonProxy {
 		network.registerMessage(new PacketRequestUpdateLetterMaker.Handler(), PacketRequestUpdateLetterMaker.class, 1, Side.SERVER);
 	}
 
+	/**
+	 * The init hook
+	 *
+	 * @param e The initialization event
+	 */
 	public void init(FMLInitializationEvent e) {
 	}
 
+	/**
+	 * The post init hook
+	 *
+	 * @param e The post initialization event
+	 */
 	public void postInit(FMLPostInitializationEvent e) {
 	}
 
 	/**
-	 * Registers all the mod block
+	 * Registers all blocks from the mod
 	 *
 	 * @param event The registry event
 	 */

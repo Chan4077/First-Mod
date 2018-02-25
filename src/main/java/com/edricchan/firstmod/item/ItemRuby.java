@@ -2,7 +2,6 @@ package com.edricchan.firstmod.item;
 
 import com.edricchan.firstmod.Reference;
 import com.edricchan.firstmod.handler.CreativeTabHandler;
-
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;

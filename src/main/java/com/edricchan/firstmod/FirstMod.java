@@ -1,7 +1,6 @@
 package com.edricchan.firstmod;
 
 import com.edricchan.firstmod.proxy.CommonProxy;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
