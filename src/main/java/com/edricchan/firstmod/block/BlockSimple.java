@@ -27,7 +27,7 @@ public class BlockSimple extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add("The most basic block in the world.");
+		tooltip.add("The most basic block in the world. Only meant for decoration purposes.");
 	}
 
 	@SideOnly(Side.CLIENT)
