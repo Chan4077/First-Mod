@@ -18,19 +18,27 @@ import java.util.List;
 
 public class BlockSimple extends Block {
 	public BlockSimple() {
+		// Makes the material clay
 		super(Material.CLAY);
+		// first.simple_block
 		setUnlocalizedName(Reference.MOD_ID + ".simple_block");
 		setRegistryName("simple_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
-		setHardness(1.0F);
+//		setHardness(1.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
+	/**
+	 * Adds information to the item's tooltip
+	 */
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add("The most basic block in the world. Only meant for decoration purposes.");
 	}
 
 	@SideOnly(Side.CLIENT)
+	/**
+	 * Initialises the item's model on the client side
+	 */
 	public void initModel() {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
 	}
