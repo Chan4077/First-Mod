@@ -24,7 +24,7 @@ public class BlockSimple extends Block {
 		setUnlocalizedName(Reference.MOD_ID + ".simple_block");
 		setRegistryName("simple_block");
 		setCreativeTab(CreativeTabHandler.tabBlocks);
-//		setHardness(1.0F);
+		setHardness(0.6F);
 	}
 
 	@SideOnly(Side.CLIENT)
