@@ -1,4 +1,9 @@
 <a name="top"></a>
+
+> :no_entry: NOTICE:
+>
+> This project is no longer maintained as of 3 September 2018.
+
 # Table of contents
 - [Welcome to the repo!](#welcome-to-the-repo-)
 - [Contributing](#contributing)
